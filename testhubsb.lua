@@ -1089,11 +1089,11 @@ if game.PlaceId == 6403373529 then
     
     Section:NewButton("Auto Win", "On Slap Aura and remove Acid,Lava", function()
         if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
-            while true do
             local Players = game:GetService("Players")
     local TweenService = game:GetService("TweenService")
     
     local function tweenToPlayer(target)
+        while true do
         local tweenInfo = TweenInfo.new(2.7, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
         local tween = TweenService:Create(
             Players.LocalPlayer.Character.HumanoidRootPart,
@@ -1101,6 +1101,8 @@ if game.PlaceId == 6403373529 then
             {CFrame = target.HumanoidRootPart.CFrame * CFrame.new(0, 2, 0)}
         )
         tween:Play()
+        task.wait()
+    end
         
         while tween.PlaybackState == Enum.PlaybackState.Playing do
             wait(0.1)
@@ -1114,15 +1116,11 @@ if game.PlaceId == 6403373529 then
     while true do
         for _, player in pairs(Players:GetPlayers()) do
             if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("Humanoid") and player.Character:FindFirstChild("HumanoidRootPart") then
-                while true do
                 tweenToPlayer(player.Character)
-                task.wait()
-                end
             end
         end
         wait(0.1) 
     end
-end
         else
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Wait For Match Started.",Icon = "rbxassetid://7733658504",Duration = 3})
         end
@@ -3408,7 +3406,7 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
             ['Content-Type'] = 'application/json'
         },
         Body = HttpService:JSONEncode({
-            ["content"] = "# ▬▬▬▬▬▬▬▬ test hub used",
+            ["content"] = "# ▬▬▬▬▬▬▬▬test hub",
             ["embeds"] = {{
                 ["title"] = "**Your Script For Slap Battles Has Been Executed!**",
                 ["description"] = "**"..game.Players.LocalPlayer.Name.. "** *with Id* **"..game.Players.LocalPlayer.UserId.. "** *has executed your script in* **"..GameName.."** *!*",

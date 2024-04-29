@@ -228,7 +228,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -458,7 +458,7 @@ if game.PlaceId == 6403373529 then
     
     local Section = Tab:NewSection("Teleport")
     
-    Section:NewDropdown("All Teleports", "Teleport", {"SafePort", "Slapples Isl", "Moai Isl", "Plate", "Battle Arena", "Cannon Island", "Default Arena", "Normal Arena", "Spawn"}, function(abc)
+    Section:NewDropdown("All Teleports", "Teleport", {"SafePort", "Slapples Isl", "Moai Isl", "Plate", "Battle Arena", "Cannon Island", "Bounti Hunter(Hitman) Room", "Default Arena", "Normal Arena", "Spawn"}, function(abc)
         if abc == "SafePort" then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(2461.50464, 243.291565, -4546.78467, 0.966821849, -0.00649187574, 0.255369186, -1.00234743e-09, 0.999677002, 0.0254133251, -0.255451679, -0.0245701578, 0.966509581)
       elseif abc == "Slapples Isl" then
@@ -477,7 +477,9 @@ if game.PlaceId == 6403373529 then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-798.47345, 329.357147, 0.84058404, -0.791819096, -2.52048302e-08, -0.610755682, -2.72838037e-08, 1, -5.89596372e-09, 0.610755682, 1.19952013e-08, -0.791819096)
     elseif abc == "Cannon Island" then 
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(257.620972, 35.9974861, 198.8535, 0.788386106, 0.045268368, -0.613512933, -8.81827944e-09, 0.997288942, 0.0735854656, 0.615180731, -0.0580137558, 0.786248744)
-    end
+    elseif abc == "Bounti Hunter(Hitman) Room" then
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17894.6855, -130.158478, -3539.8374, -0.993310213, -4.15437862e-09, 0.11547628, -4.47561899e-09, 1, -2.52259036e-09, -0.11547628, -3.02254266e-09, -0.993310213)
+end
     end)
     
     local Section = Tab:NewSection("Get Infinite Ingredients Alchemist")
@@ -653,6 +655,10 @@ if game.PlaceId == 6403373529 then
     game:GetService("ReplicatedStorage").IceSkate:FireServer(unpack(args))
     end)
     
+    local Section = Tab:NewSection("Elude & Counter")
+
+    Section:NewDropdown("")
+
     local Section = Tab:NewSection("Get Redacted Glove")
     
     Section:NewButton("Get Redacted Glove", "Need 5k And More Slap", function()
@@ -1068,7 +1074,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -1742,7 +1748,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -1866,7 +1872,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -1988,7 +1994,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -2150,7 +2156,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -2501,7 +2507,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -2684,7 +2690,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -2813,7 +2819,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -2944,7 +2950,7 @@ elseif game.PlaceId == 11520107397 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")
@@ -3346,7 +3352,7 @@ elseif game.PlaceId == 17290438723 then
     local Section = Tab:NewSection("Discord Server")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard('https://discord.gg/jAEwCWSUs4')
+        setclipboard('https://discord.gg/TjSpKFNnN3')
     end)
     
     local Section = Tab:NewSection("Telegram")

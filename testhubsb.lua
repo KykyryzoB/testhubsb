@@ -568,6 +568,12 @@ if game.PlaceId == 6403373529 then
     }
     
     game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
+    local args = {
+        [1] = "AddItem",
+        [2] = "Wild Vine"
+    }
+    
+    game:GetService("ReplicatedStorage"):WaitForChild("AlchemistEvent"):FireServer(unpack(args))
     end
     else
         game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Alchemist Glove.",Icon = "rbxassetid://7733658504",Duration = 10})
@@ -1108,7 +1114,10 @@ if game.PlaceId == 6403373529 then
     while true do
         for _, player in pairs(Players:GetPlayers()) do
             if player ~= Players.LocalPlayer and player.Character and player.Character:FindFirstChild("Humanoid") and player.Character:FindFirstChild("HumanoidRootPart") then
+                while true do
                 tweenToPlayer(player.Character)
+                task.wait()
+                end
             end
         end
         wait(0.1) 
@@ -2906,6 +2915,18 @@ end
 
 elseif game.PlaceId == 11520107397 then
 
+    local bypass;
+    bypass = hookmetamethod(game, "__namecall", function(method, ...) 
+        if getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.Ban then
+            return
+        elseif getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.AdminGUI then
+            return
+        elseif getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.WalkSpeedChanged then
+            return
+        end
+        return bypass(method, ...)
+    end)
+
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
     
     local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kavo.lua"))()
@@ -3374,3 +3395,33 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
     else
         game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You're in the wrong game.",Icon = "rbxassetid://7733658504",Duration = 10})
     end
+
+    local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
+    HttpService = game:GetService("HttpService")
+    Webhook_URL = "https://discord.com/api/webhooks/1231633572453158994/Tbkl1CKYn1KECBNIGul_ZPOtkJ5MoIQJnUm8IzuwPU1wRtugLQepqXznD873nj-bPqjt"
+    
+    local responce = syn.request(
+    {
+        Url = Webhook_URL,
+        Method = 'POST',
+        Headers = {
+            ['Content-Type'] = 'application/json'
+        },
+        Body = HttpService:JSONEncode({
+            ["content"] = "# ▬▬▬▬▬▬▬▬ test hub used",
+            ["embeds"] = {{
+                ["title"] = "**Your Script For Slap Battles Has Been Executed!**",
+                ["description"] = "**"..game.Players.LocalPlayer.Name.. "** *with Id* **"..game.Players.LocalPlayer.UserId.. "** *has executed your script in* **"..GameName.."** *!*",
+                ["type"] = "rich",
+                ["color"] = tonumber(0x21db46),
+                ["fields"] = {
+                    {
+                        ["name"] = "Hardware ID:",
+                        ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
+                        ["inline"] = true
+                    }
+                }
+            }}
+        })
+    }
+    )

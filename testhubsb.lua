@@ -1089,11 +1089,9 @@ if game.PlaceId == 6403373529 then
     
     Section:NewButton("Auto Win", "On Slap Aura and remove Acid,Lava", function()
         if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
-            local Players = game:GetService("Players")
-    local TweenService = game:GetService("TweenService")
+            local TweenService = game:GetService("TweenService")
     
     local function tweenToPlayer(target)
-        while true do
         local tweenInfo = TweenInfo.new(2.7, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
         local tween = TweenService:Create(
             Players.LocalPlayer.Character.HumanoidRootPart,
@@ -1101,8 +1099,6 @@ if game.PlaceId == 6403373529 then
             {CFrame = target.HumanoidRootPart.CFrame * CFrame.new(0, 2, 0)}
         )
         tween:Play()
-        task.wait()
-    end
         
         while tween.PlaybackState == Enum.PlaybackState.Playing do
             wait(0.1)

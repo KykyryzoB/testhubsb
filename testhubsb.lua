@@ -482,7 +482,7 @@ if game.PlaceId == 6403373529 then
 end
     end)
     
-    local Section = Tab:NewSection("Get Infinite Ingredients Alchemist")
+    local Section = Tab:NewSection("Get Infinite Ingredients")
     
     Section:NewButton("Get Infinite Ingredients", "Need Alchemist", function()
         if game.Players.LocalPlayer.leaderstats.Glove.Value == "Alchemist" then
@@ -614,7 +614,29 @@ end
     local Section = Tab:NewSection("Get FrostBite Glove")
     
     Section:NewButton("Get FrostBite Glove", "Badge", function()
-        game:GetService("TeleportService"):Teleport(17290438723)
+        local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+    if teleportFunc then
+        teleportFunc([[
+            if not game:IsLoaded() then
+                game.Loaded:Wait()
+            end
+            repeat wait() until game.Players.LocalPlayer
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-554, 177, 56)
+wait(0.7)
+for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+            if v.ClassName == "ProximityPrompt" then
+                v.HoldDuration = 0
+            end
+        end
+       wait(0.5)
+       for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
+            if v.ClassName == "ProximityPrompt" then
+                fireproximityprompt(v)
+            end
+        end
+        ]])
+    end
+    game:GetService("TeleportService"):Teleport(17290438723)
     end)
 
     local Section = Tab:NewSection("Get Admin Glove")
@@ -944,6 +966,192 @@ elseif y == "Elude" then
 end
 end)
 
+local Section = Tab:NewSection("Get Chain Glove")
+
+Section:NewButton("Get Chain Glove", "Need 1k And More Slap", function()
+    if game.Players.LocalPlayer.leaderstats.Slaps.Value >= 1000 then
+    local teleportFunc = queueonteleport or queue_on_teleport or syn and syn.queue_on_teleport
+    if teleportFunc then
+        teleportFunc([[
+            if not game:IsLoaded() then
+                game.Loaded:Wait()
+            end
+            repeat wait() until game.Players.LocalPlayer
+            repeat wait() until game.Workspace:FindFirstChild("Map"):FindFirstChild("CodeBrick")
+            if game.Workspace.Map.CodeBrick.SurfaceGui:FindFirstChild("IMGTemplate") then
+            game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "1st"
+            game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "2nd"
+            game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "3rd"
+            game.Workspace.Map.CodeBrick.SurfaceGui.IMGTemplate.Name = "4th"
+            end
+            for i,v in pairs(game.Workspace.Map.CodeBrick.SurfaceGui:GetChildren()) do
+                                if v.Name == "1st" then
+                                    if v.Image == "http://www.roblox.com/asset/?id=9648769161" then
+                                first = "4"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648765536" then
+                                first = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648762863" then
+                                first = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648759883" then
+                                first = "9"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648755440" then
+                                first = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648752438" then
+                                first = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648749145" then
+                                first = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648745618" then
+                                first = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648742013" then
+                                first = "7"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648738553" then
+                                first = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648734698" then
+                                first = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648730082" then
+                                first = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648723237" then
+                                first = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648718450" then
+                                first = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648715920" then
+                                first = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648712563" then
+                                first = "2"
+                            end
+                                end
+                            end
+            for i,v in pairs(game.Workspace.Map.CodeBrick.SurfaceGui:GetChildren()) do
+                                if v.Name == "2nd" then
+                                    if v.Image == "http://www.roblox.com/asset/?id=9648769161" then
+                                second = "4"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648765536" then
+                                second = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648762863" then
+                                second = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648759883" then
+                                second = "9"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648755440" then
+                                second = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648752438" then
+                                second = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648749145" then
+                                second = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648745618" then
+                                second = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648742013" then
+                                second = "7"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648738553" then
+                                second = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648734698" then
+                                second = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648730082" then
+                                second = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648723237" then
+                                second = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648718450" then
+                                second = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648715920" then
+                                second = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648712563" then
+                                second = "2"
+                            end
+                                end
+                            end
+            for i,v in pairs(game.Workspace.Map.CodeBrick.SurfaceGui:GetChildren()) do
+                                if v.Name == "3rd" then
+                                    if v.Image == "http://www.roblox.com/asset/?id=9648769161" then
+                                third = "4"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648765536" then
+                                third = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648762863" then
+                                third = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648759883" then
+                                third = "9"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648755440" then
+                                third = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648752438" then
+                                third = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648749145" then
+                                third = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648745618" then
+                                third = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648742013" then
+                                third = "7"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648738553" then
+                                third = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648734698" then
+                                third = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648730082" then
+                                third = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648723237" then
+                                third = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648718450" then
+                                third = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648715920" then
+                                third = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648712563" then
+                                third = "2"
+                            end
+                                end
+                            end
+            for i,v in pairs(game.Workspace.Map.CodeBrick.SurfaceGui:GetChildren()) do
+                                if v.Name == "4th" then
+                                    if v.Image == "http://www.roblox.com/asset/?id=9648769161" then
+                                fourth = "4"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648765536" then
+                                fourth = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648762863" then
+                                fourth = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648759883" then
+                                fourth = "9"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648755440" then
+                                fourth = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648752438" then
+                                fourth = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648749145" then
+                                fourth = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648745618" then
+                                fourth = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648742013" then
+                                fourth = "7"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648738553" then
+                                fourth = "8"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648734698" then
+                                fourth = "2"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648730082" then
+                                fourth = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648723237" then
+                                fourth = "3"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648718450" then
+                                fourth = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648715920" then
+                                fourth = "6"
+                            elseif v.Image == "http://www.roblox.com/asset/?id=9648712563" then
+                                fourth = "2"
+                            end
+                                end
+                            end
+            fireclickdetector(game.Workspace.Map.OriginOffice.Door.Keypad.Buttons.Reset.ClickDetector)
+            task.wait(1)
+            fireclickdetector(game.Workspace.Map.OriginOffice.Door.Keypad.Buttons[first].ClickDetector)
+            task.wait(1)
+            fireclickdetector(game.Workspace.Map.OriginOffice.Door.Keypad.Buttons[second].ClickDetector)
+            task.wait(1)
+            fireclickdetector(game.Workspace.Map.OriginOffice.Door.Keypad.Buttons[third].ClickDetector)
+            task.wait(1)
+            fireclickdetector(game.Workspace.Map.OriginOffice.Door.Keypad.Buttons[fourth].ClickDetector)
+            task.wait(1)
+            fireclickdetector(game.Workspace.Map.OriginOffice.Door.Keypad.Buttons.Enter.ClickDetector)
+            task.wait(2)
+            game:GetService("TeleportService"):Teleport(6403373529)
+        ]])
+    end
+    game:GetService("TeleportService"):Teleport(9431156611)
+else
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need 1000 And More Slap.",Icon = "rbxassetid://7733658504",Duration = 10})
+end)
+
     local Section = Tab:NewSection("Get Redacted Glove")
     
     Section:NewButton("Get Redacted Glove", "Need 5k And More Slap", function()
@@ -988,21 +1196,11 @@ end)
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Lobby.brazil.portal.CFrame
     end)
     
-    local Section = Tab:NewSection("Duck Badge")
+    local Section = Tab:NewSection("Get Duck, The Lone Orange, Court Evidence Badge")
     
-    Section:NewButton("Get Duck Badge", "Badge", function()
+    Section:NewButton("Get Badge", "Badge", function()
         fireclickdetector(workspace.Arena["default island"]["Rubber Ducky"].ClickDetector)
-    end)
-    
-    local Section = Tab:NewSection("Court Evidence Badge")
-    
-    Section:NewButton("Get Court Evidence Badge", "Badge", function()
         fireclickdetector(workspace.Lobby.Scene.knofe.ClickDetector)
-    end)
-    
-    local Section = Tab:NewSection("Get The Lone Orange Badge")
-    
-    Section:NewButton("Get The Lone Orange Badge", "Badge", function()
         fireclickdetector(workspace.Arena.island5.Orange.ClickDetector)
     end)
     
@@ -2813,23 +3011,23 @@ end)
     
     Section:NewButton("Get Null", "INFO", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.43311, 0.498345017, -584.62207, -0.999999344, 1.9935203e-07, -0.001146656, -2.33472383e-06, 0.999997556, 0.00221002498, 0.00114665367, 0.00221002637, -0.999996901)
-    wait(0.2)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.00195, -22.5011158, -531.456604, -0.97890377, -0.00139220862, -0.204317153, -1.07610222e-05, 0.999977112, -0.00676224614, 0.204321906, -0.00661738915, -0.978881419)
-    wait(1)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.84912, -137.501831, -208.114243, -0.999794722, -4.84930388e-05, 0.0202591848, -2.56677185e-06, 0.999997437, 0.00226720236, -0.0202592425, 0.00226668525, -0.999792159)
-    wait(1)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5459.13623, -137.534866, -16.2512455, -0.999803603, -7.01446479e-05, -0.0198170673, 1.12833516e-06, 0.999993503, -0.00359622552, 0.0198171902, -0.00359554123, -0.999797106)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5461.78418, -137.500931, 320.790985, -0.999628186, 2.68719824e-09, -0.027268026, -7.00493672e-14, 1, 9.855016e-08, 0.027268026, 9.85135173e-08, -0.999628186)
-    wait(0.2)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5457.24365, -138.53334, 552.417908, -0.992027462, 0.000627390749, 0.126020297, -1.96974838e-06, 0.999987543, -0.00499393977, -0.126021847, -0.00495437346, -0.992015123)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5465.92773, -137.50119, 775.386047, -0.999999702, -1.35602259e-11, 0.000742317818, 2.81569925e-16, 1, 1.82677908e-08, -0.000742317818, 1.82677873e-08, -0.999999702)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5446.07959, -187.535141, 1403.45264, -0.998518229, -0.000200719005, -0.0544176437, 9.64447963e-07, 0.999993145, -0.00370615674, 0.0544180125, -0.00370071735, -0.998511374)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5459.13184, -187.502777, 1839.21008, -0.982225895, -0.000504596625, 0.187701747, -3.92595393e-06, 0.999996483, 0.00266763126, -0.187702417, 0.00261947582, -0.982222438)
-    wait(0.2)
+    wait(0.1)
     fireclickdetector(workspace.Model.Handle.ClickDetector)
     end)
     
@@ -2837,23 +3035,23 @@ end)
     
     Section:NewButton("Get Tinkerer", "INFO", function()
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.43311, 0.498345017, -584.62207, -0.999999344, 1.9935203e-07, -0.001146656, -2.33472383e-06, 0.999997556, 0.00221002498, 0.00114665367, 0.00221002637, -0.999996901)
-    wait(0.2)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.00195, -22.5011158, -531.456604, -0.97890377, -0.00139220862, -0.204317153, -1.07610222e-05, 0.999977112, -0.00676224614, 0.204321906, -0.00661738915, -0.978881419)
-    wait(1)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.84912, -137.501831, -208.114243, -0.999794722, -4.84930388e-05, 0.0202591848, -2.56677185e-06, 0.999997437, 0.00226720236, -0.0202592425, 0.00226668525, -0.999792159)
-    wait(1)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5459.13623, -137.534866, -16.2512455, -0.999803603, -7.01446479e-05, -0.0198170673, 1.12833516e-06, 0.999993503, -0.00359622552, 0.0198171902, -0.00359554123, -0.999797106)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5461.78418, -137.500931, 320.790985, -0.999628186, 2.68719824e-09, -0.027268026, -7.00493672e-14, 1, 9.855016e-08, 0.027268026, 9.85135173e-08, -0.999628186)
-    wait(0.2)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5457.24365, -138.53334, 552.417908, -0.992027462, 0.000627390749, 0.126020297, -1.96974838e-06, 0.999987543, -0.00499393977, -0.126021847, -0.00495437346, -0.992015123)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5465.92773, -137.50119, 775.386047, -0.999999702, -1.35602259e-11, 0.000742317818, 2.81569925e-16, 1, 1.82677908e-08, -0.000742317818, 1.82677873e-08, -0.999999702)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4922.79004, -212.500443, 801.610962, -0.997125506, -5.95130807e-08, -0.0757674426, -6.29570351e-08, 1, 4.30657821e-08, 0.0757674426, 4.77120814e-08, -0.997125506)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(4839.9873, -212.534714, 801.233582, -0.174594268, 0.00196698541, 0.984638512, 1.7593112e-06, 0.999997973, -0.0019973577, -0.984640479, -0.000347001653, -0.174593911)
-    wait(0.2)
+    wait(0.1)
     fireclickdetector(workspace:GetChildren()[13].Handle.ClickDetector)
     end)
     
@@ -2861,21 +3059,21 @@ end)
     
     Section:NewButton("Get Rob Plushe Artifact", "Artifact", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.43311, 0.498345017, -584.62207, -0.999999344, 1.9935203e-07, -0.001146656, -2.33472383e-06, 0.999997556, 0.00221002498, 0.00114665367, 0.00221002637, -0.999996901)
-    wait(0.2)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.00195, -22.5011158, -531.456604, -0.97890377, -0.00139220862, -0.204317153, -1.07610222e-05, 0.999977112, -0.00676224614, 0.204321906, -0.00661738915, -0.978881419)
-    wait(1)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5462.84912, -137.501831, -208.114243, -0.999794722, -4.84930388e-05, 0.0202591848, -2.56677185e-06, 0.999997437, 0.00226720236, -0.0202592425, 0.00226668525, -0.999792159)
-    wait(1)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5459.13623, -137.534866, -16.2512455, -0.999803603, -7.01446479e-05, -0.0198170673, 1.12833516e-06, 0.999993503, -0.00359622552, 0.0198171902, -0.00359554123, -0.999797106)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5461.78418, -137.500931, 320.790985, -0.999628186, 2.68719824e-09, -0.027268026, -7.00493672e-14, 1, 9.855016e-08, 0.027268026, 9.85135173e-08, -0.999628186)
-    wait(0.2)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5457.24365, -138.53334, 552.417908, -0.992027462, 0.000627390749, 0.126020297, -1.96974838e-06, 0.999987543, -0.00499393977, -0.126021847, -0.00495437346, -0.992015123)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5465.92773, -137.50119, 775.386047, -0.999999702, -1.35602259e-11, 0.000742317818, 2.81569925e-16, 1, 1.82677908e-08, -0.000742317818, 1.82677873e-08, -0.999999702)
-    wait(0.5)
+    wait(0.1)
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(5258.60449, -142.00119, 852.389954, -0.945539773, -7.77257494e-11, 0.325506628, -5.1091098e-10, 1, -1.24532296e-09, -0.325506628, -1.34380729e-09, -0.945539773)
-    wai(0.2)
+    wait(0.1)
     fireclickdetector(workspace._ugcQuestObjectBobPlushie.ClickDetector)
     end)
     

@@ -1150,6 +1150,7 @@ Section:NewButton("Get Chain Glove", "Need 1k And More Slap", function()
     game:GetService("TeleportService"):Teleport(9431156611)
 else
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need 1000 And More Slap.",Icon = "rbxassetid://7733658504",Duration = 10})
+end
 end)
 
     local Section = Tab:NewSection("Get Redacted Glove")

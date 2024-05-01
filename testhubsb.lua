@@ -1442,10 +1442,10 @@ end)
     Section:NewToggle("Anti Megarock/CUSTOM", "Antis", function(state)
         getgenv().antimegarocksb = state
         while getgenv().antimegarocksb do
-            for i,v in pairs(game.Workspace:GetDescendants()) do
-                if v.Name == "rock" then
-                    v.CanTouch = false
-                    v.CanQuery = false
+            for _,v in pairs(game.Players:GetChildren()) do
+                if v.Character:FindFirstChild("rock") then
+                    v.Character:FindFirstChild("rock").CanTouch = false
+                    v.Character:FindFirstChild("rock").CanQuery = false
                 end
             end
         task.wait()
@@ -1580,9 +1580,10 @@ end)
     Section:NewButton("Auto Win", "On Slap Aura and remove Acid,Lava", function()
         if game.Players.LocalPlayer.Character:WaitForChild("inMatch").Value == true then
             local TweenService = game:GetService("TweenService")
+            local Players = game:GetService("Players")
     
     local function tweenToPlayer(target)
-        local tweenInfo = TweenInfo.new(2.7, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
+        local tweenInfo = TweenInfo.new(2.75, Enum.EasingStyle.Linear, Enum.EasingDirection.In)
         local tween = TweenService:Create(
             Players.LocalPlayer.Character.HumanoidRootPart,
             tweenInfo,
@@ -1618,35 +1619,18 @@ end)
         getgenv().slapaurasr = state
             if game.Players.LocalPlayer.Character.inMatch.Value == true then
                 while getgenv().slapaurasr do
-                    local Players = game:GetService("Players")
-    local LocalPlayer = Players.LocalPlayer
-    local NearbyPlayers = {}
-    
-    for i, player in ipairs(Players:GetPlayers()) do
-        if player ~= LocalPlayer then
-            local character = player.Character
-            if character and character:FindFirstChild("Head") then
-                local distance = (LocalPlayer.Character.Head.Position - character.Head.Position).magnitude
-                if distance <= 25 then
-                    table.insert(NearbyPlayers, player)
+                    for i,v in pairs(game.Players:GetChildren()) do
+                        if v ~= game.Players.LocalPlayer and v.Character then
+                            if v.Character:FindFirstChild("Dead") == nil and v.Character:FindFirstChild("HumanoidRootPart") then
+                                game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Slap"):FireServer(v.Character:WaitForChild("HumanoidRootPart"))
+                            end
+                        end
+                    end
+                task.wait()
                 end
+            else
+                game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Wait For Match Started.",Icon = "rbxassetid://7733658504",Duration = 5})
             end
-        end
-    end
-    
-    if #NearbyPlayers > 0 then
-        for i, player in ipairs(NearbyPlayers) do
-            local args = {
-                [1] = player.Character.Head
-            }
-            game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Slap"):FireServer(unpack(args))
-        end
-    end
-    task.wait()
-    end
-    else
-        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Wait For Match Started.",Icon = "rbxassetid://7733658504",Duration = 5})
-    end
     end)
     
     local Tab = Window:NewTab("Misc")
@@ -3150,6 +3134,18 @@ end)
     })
     
     elseif game.PlaceId == 15507333474 then
+
+    local bypass;
+        bypass = hookmetamethod(game, "__namecall", function(method, ...) 
+            if getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.Ban then
+                return
+            elseif getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.AdminGUI then
+                return
+            elseif getnamecallmethod() == "FireServer" and method == game.ReplicatedStorage.WalkSpeedChanged then
+                return
+            end
+            return bypass(method, ...)
+        end)
     
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
     
@@ -3197,31 +3193,17 @@ end)
         getgenv().slpaaurachrev = state
     
         while getgenv().slpaaurachrev do
-    local Players = game:GetService("Players")
-    local LocalPlayer = Players.LocalPlayer
-    local NearbyPlayers = {}
-    
-    for _, player in ipairs(Players:GetPlayers()) do
-        if player ~= LocalPlayer then
-            local character = player.Character
-            if character and character:FindFirstChild("Head") then
-                local distance = (LocalPlayer.Character.Head.Position - character.Head.Position).magnitude
-                if distance <= 25 then 
-                    table.insert(NearbyPlayers, player)
+            for i,v in pairs(game.Players:GetChildren()) do
+                if v ~= game.Players.LocalPlayer and v.Character then
+                    if v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Ragdolled").Value == false then
+                        Magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
+                        if 25 >= Magnitude then
+                            game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"):FireServer(v.Character:WaitForChild("HumanoidRootPart"))
+                        end
+                    end
                 end
             end
-        end
-    end
-    
-    if #NearbyPlayers > 0 then
-        for _, player in ipairs(NearbyPlayers) do
-            local args = {
-                [1] = player.Character.Head
-            }
-            game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"):FireServer(unpack(args))
-        end
-    end
-        task.wait(2)
+        task.wait()
         end
     end)
     
@@ -3232,10 +3214,10 @@ end)
     Section:NewToggle("Farm Wins", ".", function(state)
         getgenv().autowinchev = state
         if getgenv.autowinchev == false then
-            game.Players.LocalPlayer.Character.Torso.Anchored = true
+            game.Players.LocalPlayer.Character.Torso.Anchored = false
         end
         while getgenv().autowinchev do
-            game.Players.LocalPlayer.Character.Torso.Anchored = false
+            game.Players.LocalPlayer.Character.Torso.Anchored = true
             game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(156.959579, 178.328217, -112.697945, 0.992797017, 0.112782016, -0.0404260047, 7.24666416e-09, 0.337422162, 0.94135344, 0.119808368, -0.934572875, 0.334991723)
         end
     end)

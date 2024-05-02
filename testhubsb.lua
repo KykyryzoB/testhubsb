@@ -1622,7 +1622,10 @@ end)
                     for i,v in pairs(game.Players:GetChildren()) do
                         if v ~= game.Players.LocalPlayer and v.Character then
                             if v.Character:FindFirstChild("Dead") == nil and v.Character:FindFirstChild("HumanoidRootPart") then
-                                game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Slap"):FireServer(v.Character:WaitForChild("HumanoidRootPart"))
+                                Magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
+                                if 25 >= Magnitude then
+                                    game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Slap"):FireServer(v.Character:WaitForChild("HumanoidRootPart"))
+                                end
                             end
                         end
                     end
@@ -1692,7 +1695,7 @@ end)
     
     local Section = Tab:NewSection("Esp")
     
-    Section:NewToggle("Item Esp", "Misc", function(state)
+    Section:NewToggle("Items Esp", "Misc", function(state)
         getgenv().istemespsra = state
         if getgenv().istemespsra == false then
             for i,v in ipairs(game.Workspace.Items:GetChildren()) do
@@ -1729,7 +1732,7 @@ end)
         end
     end)
     
-    Section:NewToggle("Esp Players", "Misc", function(state)
+    Section:NewToggle("Players Esp", "Misc", function(state)
         getgenv().espsr = state
         if getgenv().espsr == false then
             for i,v in ipairs(game.Players:GetChildren()) do
@@ -3874,7 +3877,7 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
             ['Content-Type'] = 'application/json'
         },
         Body = HttpService:JSONEncode({
-            ["content"] = "# ▬▬▬▬▬▬▬▬test hub",
+            ["content"] = "# ▬▬▬▬▬▬testhub▬▬",
             ["embeds"] = {{
                 ["title"] = "**Your Script For Slap Battles Has Been Executed!**",
                 ["description"] = "**"..game.Players.LocalPlayer.Name.. "** *with Id* **"..game.Players.LocalPlayer.UserId.. "** *has executed your script in* **"..GameName.."** *!*",

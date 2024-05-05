@@ -481,12 +481,27 @@ if game.PlaceId == 6403373529 then
         game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(17894.6855, -130.158478, -3539.8374, -0.993310213, -4.15437862e-09, 0.11547628, -4.47561899e-09, 1, -2.52259036e-09, -0.11547628, -3.02254266e-09, -0.993310213)
 end
     end)
+
+    local Section = Tab:NewSection("Slapple Farm")
+
+    Section:NewToggle("Slapple Farm", "Only In Arena", function(state)
+        getgenv().slapfarmspissb = state
+        while getgenv().slapfarmspissb do
+            for i,v in pairs(game.Workspace.Arena.island5.Slapples:GetDescendants()) do
+                if v.Name == "Glove" and v:FindFirstChild("TouchInterest") then
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 0)
+                    firetouchinterest(game.Players.LocalPlayer.Character.HumanoidRootPart, v, 1)
+                end
+            end
+        task.wait()
+        end
+    end)
     
     local Section = Tab:NewSection("Get Infinite Ingredients")
     
     Section:NewButton("Get Infinite Ingredients", "Need Alchemist", function()
         if game.Players.LocalPlayer.leaderstats.Glove.Value == "Alchemist" then
-            for i = 1,50 do
+            for i = 1,200 do
                 local args = {
         [1] = "AddItem",
         [2] = "Blood Rose"
@@ -1422,6 +1437,244 @@ end)
     end
         end
     end)
+
+    Section:NewToggle("Anti Void 2.0", "You Bob?", function(state)
+        if state then
+            local workspace = game:GetService("Workspace")
+local antivoidKYK = Instance.new("Part", workspace)
+antivoidKYK.CanCollide = true
+antivoidKYK.Anchored = true
+antivoidKYK.CFrame = CFrame.new(23.2798462, -19.8447475, 1.83554196, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK.Size = Vector3.new(1139.2593994140625, 1.5, 2048)
+antivoidKYK.Name = "antivoidKYK"
+antivoidKYK.Transparency = 0.5
+local antivoidKYK2 = Instance.new("Part", workspace)
+antivoidKYK2.CanCollide = true
+antivoidKYK2.Anchored = true
+antivoidKYK2.CFrame = CFrame.new(-458.458344, -9.25, 1.83554196, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK2.Size = Vector3.new(1139.2593994140625, 1.5, 2048)
+antivoidKYK2.Name = "antivoidKYK2"
+antivoidKYK2.Transparency = 0.5
+local antivoidKYK3 = Instance.new("Part", workspace)
+antivoidKYK3.CanCollide = true
+antivoidKYK3.Anchored = true
+antivoidKYK3.CFrame = CFrame.new(-690.65979, 47.25, 1.83554196, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK3.Size = Vector3.new(674.8563232421875, 0.6048492789268494, 2048)
+antivoidKYK3.Name = "antivoidKYK3"
+antivoidKYK3.Transparency = 0.5
+local antivoidKYK4 = Instance.new("Part", workspace)
+antivoidKYK4.CanCollide = true
+antivoidKYK4.Anchored = true
+antivoidKYK4.CFrame = CFrame.new(402.964996, 29.25, 222.310089, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK4.Size = Vector3.new(379.88922119140625, 1.5, 160.8837127685547)
+antivoidKYK4.Name = "antivoidKYK4"
+antivoidKYK4.Transparency = 0.5
+local antivoidKYK6 = Instance.new("Part", workspace)
+antivoidKYK6.CanCollide = true
+antivoidKYK6.Anchored = true
+antivoidKYK6.CFrame = CFrame.new(178.719162, -18.9417267, 1.83554196, -0.989596844, -0.143868446, 0, 0.143868446, -0.989596844, 0, 0, 0, 1)
+antivoidKYK6.Size = Vector3.new(143.94830322265625, 1.5, 2048)
+antivoidKYK6.Name = "antivoidKYK6"
+antivoidKYK6.Transparency= 0.5
+local antivoidKYK7 = Instance.new("Part", workspace)
+antivoidKYK7.CanCollide = true
+antivoidKYK7.Anchored = true
+antivoidKYK7.CFrame = CFrame.new(-309.152832, 15.4761791, 1.83554196, -0.816968799, -0.576681912, 0, 0.576681912, -0.816968799, 0, 0, 0, 1)
+antivoidKYK7.Size = Vector3.new(110.13511657714844, 2.740000009536743, 2048)
+antivoidKYK7.Name = "antivoidKYK7"
+antivoidKYK7.Transparency = 0.5
+local antivoidKYK8 = Instance.new("Part", workspace)
+antivoidKYK8.CanCollide = true
+antivoidKYK8.Anchored = true
+antivoidKYK8.CFrame = CFrame.new(174.971924, 5.34897423, 222.310089, -0.838688731, 0.544611216, 0, -0.544611216, -0.838688731, 0, 0, 0, 1)
+antivoidKYK8.Size = Vector3.new(89.76103210449219, 1.5, 160.8837127685547)
+antivoidKYK8.Name = "antivoidKYK8"
+antivoidKYK8.Transparency = 0.5
+local antivoidKYK9 = Instance.new("Part", workspace)
+antivoidKYK9.CanCollide = true
+antivoidKYK9.Anchored = true
+antivoidKYK9.CFrame = CFrame.new(402.965027, 5.49165154, 74.8157959, 2.98023224e-05, -1.14142895e-05, -1, -0.668144584, -0.744031429, -1.14142895e-05, -0.744031489, 0.668144584, -2.98023224e-05)
+antivoidKYK9.Size = Vector3.new(74.23055267333984, 1, 379.88922119140625)
+antivoidKYK9.Name = "antivoidKYK9"
+antivoidKYK9.Transparency = 0.5
+local antivoidKYK10 = Instance.new("Part", workspace)
+antivoidKYK10.CanCollide = true
+antivoidKYK10.Anchored = true
+antivoidKYK10.CFrame = CFrame.new(402.964996, 29.9136467, 121.981705, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK10.Size = Vector3.new(379.88922119140625, 1.5, 39.77305603027344)
+antivoidKYK10.Name = "antivoidKYK10"
+antivoidKYK10.Transparency = 0.5
+local antivoidKYK11 = Instance.new("WedgePart", workspace)
+antivoidKYK11.CanCollide = true
+antivoidKYK11.Anchored = true
+antivoidKYK11.CFrame = CFrame.new(134.084229, -17.8583984, 94.3953705, 0.541196942, -0.354067981, 0.762719929, -0.840263784, -0.192543149, 0.506837189, -0.0325982571, -0.915184677, -0.401714325)
+antivoidKYK11.Size = Vector3.new(1, 88.66793823242188, 34.42972946166992)
+antivoidKYK11.Name = "antivoidKYK11"
+antivoidKYK11.Transparency = 0.5
+local antivoidKYK12 = Instance.new("WedgePart", workspace)
+antivoidKYK12.CanCollide = true
+antivoidKYK12.Anchored = true
+antivoidKYK12.CFrame = CFrame.new(168.441879, 2.46393585, 125.815231, -0.350553155, -0.534268022, 0.769201458, -0.198098332, 0.845035911, 0.496660322, -0.915352523, 0.0217281878, -0.402067661)
+antivoidKYK12.Size = Vector3.new(1, 0.9999924302101135, 82.1865463256836)
+antivoidKYK12.Name = "antivoidKYK12"
+antivoidKYK12.Transparency = 0.5
+local antivoidKYK13 = Instance.new("WedgePart", workspace)
+antivoidKYK13.CanCollide = true
+antivoidKYK13.Anchored = true
+antivoidKYK13.CFrame = CFrame.new(206.315063, 26.9295502, 105.471031, 0.534210563, -0.415855825, -0.73599112, -0.845072925, -0.285055399, -0.452321947, -0.021697551, 0.863601387, -0.503708005)
+antivoidKYK13.Size = Vector3.new(1, 13.53612232208252, 9.847718238830566)
+antivoidKYK13.Name = "antivoidKYK13"
+antivoidKYK13.Transparency = 0.5
+local antivoidKYK14 = Instance.new("WedgePart", workspace)
+antivoidKYK14.CanCollide = true
+antivoidKYK14.Anchored = true
+antivoidKYK14.CFrame = CFrame.new(165.965088, 2.12955856, 77.8575592, -0.53421092, -0.415855944, 0.735991359, 0.845073164, -0.285055757, 0.452322066, 0.0216975808, 0.863601625, 0.503708005)
+antivoidKYK14.Size = Vector3.new(1, 13.53612232208252, 99.8001480102539)
+antivoidKYK14.Name = "antivoidKYK14"
+antivoidKYK14.Transparency = 0.5
+local antivoidKYK15 = Instance.new("WedgePart", workspace)
+antivoidKYK15.CanCollide = true
+antivoidKYK15.Anchored = true
+antivoidKYK15.CFrame = CFrame.new(172.67041, 5.49164963, 74.8157959, -4.58955765e-05, 2.05039978e-05, 1, 0.743987858, 0.668193102, 2.05039978e-05, -0.668193102, 0.743987858, -4.58955765e-05)
+antivoidKYK15.Size = Vector3.new(1, 74.23055267333984, 80.699951171875)
+antivoidKYK15.Name = "antivoidKYK15"
+antivoidKYK15.Transparency = 0.5
+local antivoidKYK16 = Instance.new("WedgePart", workspace)
+antivoidKYK16.CanCollide = true
+antivoidKYK16.Anchored = true
+antivoidKYK16.CFrame = CFrame.new(212.753906, 30.0632439, 121.981705, -0.283976078, -0.95883137, 0, 0.95883137, -0.283976078, 0, 0, 0, 1)
+antivoidKYK16.Size = Vector3.new(1, 0.8520558476448059, 39.773048400878906)
+antivoidKYK16.Name = "antivoidKYK16"
+antivoidKYK16.Transparency = 0.5
+local antivoidKYK17 = Instance.new("WedgePart", workspace)
+antivoidKYK17.CanCollide = true
+antivoidKYK17.Anchored = true
+antivoidKYK17.CFrame = CFrame.new(212.884216, 30.1233234, 121.984734, 0.544644356, 0.33412537, -0.769235253, -0.838644743, 0.223680317, -0.496630788, 0.00612583756, 0.915602207, 0.402038693)
+antivoidKYK17.Size = Vector3.new(1, 36.08900451660156, 16.739320755004883)
+antivoidKYK17.Name = "antivoidKYK17"
+antivoidKYK17.Transparency = 0.5
+local antivoidKYK18 = Instance.new("WedgePart", workspace)
+antivoidKYK18.CanCollide = true
+antivoidKYK18.Anchored = true
+antivoidKYK18.CFrame = CFrame.new(174.83577, 5.55865097, 141.871262, -0.544644356, 0.33412537, 0.769235253, 0.838644743, 0.223680317, 0.496630788, -0.00612583756, 0.915602207, -0.402038693)
+antivoidKYK18.Size = Vector3.new(1, 36.08900451660156, 82.1865463256836)
+antivoidKYK18.Name = "antivoidKYK18"
+antivoidKYK18.Transparency = 0.5
+local antivoidKYK19 = Instance.new("WedgePart", workspace)
+antivoidKYK19.CanCollide = true
+antivoidKYK19.Anchored = true
+antivoidKYK19.CFrame = CFrame.new(165.427338, 2.97219658, 77.884697, -0.541196942, -0.354067981, -0.762719929, 0.840263784, -0.192543149, -0.506837189, 0.0325982571, -0.915184677, 0.401714325)
+antivoidKYK19.Size = Vector3.new(1, 88.66793823242188, 47.76289749145508)
+antivoidKYK19.Name = "antivoidKYK19"
+antivoidKYK19.Transparency = 0.5
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro6KYK"
+block.Size = Vector3.new(460, 3, 150) 
+block.Transparency = 0.5
+block.CanCollide = true
+block.Anchored = true 
+block.Position = Vector3.new(-27815.248, 162.506134, 4834.07471, -1.3038516e-07, -8.49145394e-08, 1, 2.64238391e-08, 1, 8.49145394e-08, -1, 2.64238498e-08, -1.3038516e-07)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro5KYK"
+block.Size = Vector3.new(500, 3, 150) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-27965.0977, 35.1371307, 4834.51074, 1, 0, 0, 0, 1, 0, 0, 0, 1) 
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro4KYK"
+block.Size = Vector3.new(1000, 5, 500) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-28030.8477, -93.4633942, 4950.85986, -1.1920929e-07, 0, -1.00000012, 0, 1, 0, 1.00000012, 0, -1.1920929e-07)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro3KYK"
+block.Size = Vector3.new(100, 5, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-28030.6484, -219.863602, 4836.85986, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro2KYK"
+block.Size = Vector3.new(1000, 2, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-16906.6445, 770.000549, 4719.68848, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetroKYK"
+block.Size = Vector3.new(1000, 2, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-16874.8262, -7.55000019, 4799.2666)
+block.Parent = game.Workspace
+local block = Instance.new("Part")
+block.Name = "AntiVoidPsychoKYK"
+block.Size = Vector3.new(2000, 1, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(17800.9082, 2947, -226.017517, -0.248515129, 0.00487846136, -0.968615651, 0.966844261, -0.0594091415, -0.248359889, -0.0587562323, -0.998221755, 0.0100474358)
+block.Parent = game.Workspace
+local block = Instance.new("Part")
+block.Name = "AntiVoidBAKYK"
+block.Size = Vector3.new(2000, 10, 2000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(3500, 74.5, 0)
+block.Parent = game.Workspace
+        else
+            local antivoidList = {
+                "antivoidKYK",
+                "AntiVoidPsychoKYK",
+                "AntiVoidRetro2KYK",
+                "AntiVoidRetro3KYK",
+                "AntiVoidRetro4KYK",
+                "AntiVoidRetro5KYK",
+                "AntiVoidRetro6KYK",
+                "AntiVoidBAKYK",
+                "AntiVoidRetroKYK",
+                "antivoidKYK2",
+                "antivoidKYK3",
+                "antivoidKYK4",
+                "antivoidKYK6",
+                "antivoidKYK7",
+                "antivoidKYK8",
+                "antivoidKYK9",
+                "antivoidKYK10",
+                "antivoidKYK11",
+                "antivoidKYK12",
+                "antivoidKYK13",
+                "antivoidKYK14",
+                "antivoidKYK15",
+                "antivoidKYK16",
+                "antivoidKYK17",
+                "antivoidKYK18",
+                "antivoidKYK19"
+            }
+            
+            for _, antivoidName in ipairs(antivoidList) do
+                local block = game.Workspace:FindFirstChild(antivoidName)
+                if block then
+                    block:Destroy()
+                end
+            end
+        end
+    end)
+
     
     Section:NewToggle("Anti Ragdoll", "Character Reset", function(state)
         getgenv().antiragdolsb = state
@@ -1446,6 +1699,19 @@ end)
                 if v.Character:FindFirstChild("rock") then
                     v.Character:FindFirstChild("rock").CanTouch = false
                     v.Character:FindFirstChild("rock").CanQuery = false
+                end
+            end
+        task.wait()
+        end
+    end)
+
+    Section:NewToggle("Anti Sbeve", "Antis", function(state)
+        getgenv().antisbevesb = state
+        while getgenv().antisbevesb do
+            for i,v in pairs(game.Players:GetPlayers()) do
+                if v.Character:FindFirstChild("stevebody") then
+                    v.Character:FindFirstChild("stevebody").CanTouch = false
+                    v.Character:FindFirstChild("stevebody").CanQuery = false
                 end
             end
         task.wait()
@@ -2479,6 +2745,60 @@ end)
     Section:NewButton("Click to copy", "INFO", function()
         setclipboard("https://www.youtube.com/channel/UCgqxZ4MrGPp13dlZyotp_fQ")
     end)
+
+    local Tab = Window:NewTab("Combat")
+
+    local Section = Tab:NewSection("Auto Slap Bob")
+    
+    Section:NewToggle("Auto Slap Bob", "Antis", function(state)
+        getgenv().autoslapboba = state
+        while getgenv().autoslapboba do
+            workspace:WaitForChild("bobBoss"):WaitForChild("DamageEvent"):FireServer()
+        task.wait(0.1)
+        end
+    end)
+    
+    local Section = Tab:NewSection("Slap Aura Mini Bob")
+    
+    Section:NewToggle("Slap Aura Mini Bob", "Antis", function(state)
+        getgenv().slapminiboba = state
+        while getgenv().slapminiboba do
+                if game.Players.LocalPlayer.leaderstats.Glove.Value == "Reaper" then
+                    for _, v in ipairs(workspace:GetDescendants()) do
+                        if v.Name == "BobClone" then
+                            game:GetService("ReplicatedStorage").ReaperHit:FireServer(v:FindFirstChild("HumanoidRootPart"))
+                        end
+                    end
+                elseif game.Players.LocalPlayer.leaderstats.Glove.Value == "Killstreak" then
+                    for _, v in ipairs(workspace:GetDescendants()) do
+                        if v.Name == "BobClone" then
+                            game:GetService("ReplicatedStorage").KSHit:FireServer(v:FindFirstChild("HumanoidRootPart"))
+                        end
+                    end
+                elseif game.Players.LocalPlayer.leaderstats.Glove.Value == "God's Hand" then
+                    for _, v in ipairs(workspace:GetDescendants()) do
+                        if v.Name == "BobClone" then
+                            game:GetService("ReplicatedStorage").Godshand:FireServer(v:FindFirstChild("HumanoidRootPart"))
+                        end
+                    end
+                elseif game.Players.LocalPlayer.leaderstats.Glove.Value == "Tycoon" then
+                    for _, v in ipairs(workspace:GetDescendants()) do
+                        if v.Name == "BobClone" then
+                            game:GetService("ReplicatedStorage").GeneralHit:FireServer(v:FindFirstChild("HumanoidRootPart"))
+                        end
+                    end
+                elseif game.Players.LocalPlayer.leaderstats.Glove.Value == "Default" then
+                    for _, v in ipairs(game.Players:GetPlayers()) do
+                        if v ~= game.Players.LocalPlayer and v.Character then
+                            if v.Character:FindFirstChild("Ragdolled").Value == false then
+                                game.GetService("ReplicatedStorage").b:FireServer(v.Character:FindFirstChild("HumanoidRootPart"))
+                            end
+                        end
+                    end
+                end
+        task.wait(0.25)
+        end
+    end)
     
     local Tab = Window:NewTab("Misc")
     
@@ -2530,39 +2850,22 @@ end)
         task.wait(0.2)
         end    
     end)
+
+    local Section = Tab:NewSection("Anti Ragdoll")
     
-    local Tab = Window:NewTab("Combat")
-    
-    local Section = Tab:NewSection("Slap Aura (MiniBOB)")
-    
-    Section:NewToggle("Slap Aura (MiniBOB, Only KS And Reaper)", "Antis", function(state)
-        getgenv().slapminiboba = state
-        while getgenv().slapminiboba do
-                if game.Players.LocalPlayer.leaderstats.Glove.Value == "Reaper" then
-                    for i,v in ipairs(workspace:GetDescendants()) do
-                        if v.Name == "BobClone" and v:FindFirstChild("HumanoidRootPart") then
-                            game:GetService("ReplicatedStorage"):WaitForChild("ReaperHit"):FireServer("v.HumanoidRootPart")
-                        end
-                    end
-                elseif game.Players.LocalPlayer.leaderstats.Glove.Value == "Killstreak" then
-                    for i,v in ipairs(game:GetDescendants()) do
-                        if v.Name == "BobClone" and v:FindFirstChild("HumanoidRootPart") then
-                            game:GetService("ReplicatedStorage"):WaitForChild("KSHit"):FireServer("v.HumanoidRootPart")
-                        end
-                    end
-                end
-        task.wait(0.25)
-    end
-    end)
-    
-    local Section = Tab:NewSection("Auto Slap Bob")
-    
-    Section:NewToggle("Auto Slap Bob", "Antis", function(state)
-        getgenv().autoslapboba = state
-        while getgenv().autoslapboba do
-                workspace:WaitForChild("bobBoss"):WaitForChild("DamageEvent"):FireServer()
-        task.wait(0.1)
-    end
+    Section:NewToggle("Anti Ragdoll", "Anti Ragdoll", function(state)
+        getgenv().antiragdoldr = state
+        if getgenv().antiragdoldr == false then
+            game.Players.LocalPlayer.Character.Torso.Anchored = false
+        end
+        while getgenv().antiragdoldr do
+            if game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Value == true then
+                repeat task.wait() game.Players.LocalPlayer.Character.Torso.Anchored = true
+                until game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Value == false
+                game.Players.LocalPlayer.Character.Torso.Anchored = false
+            end
+        task.wait()
+        end
     end)
     
     local Tab = Window:NewTab("Player")
@@ -3733,6 +4036,243 @@ elseif game.PlaceId == 11520107397 then
     end
         end
     end)
+
+    Section:NewToggle("Anti Void 2.0", "You Bob?", function(state)
+        if state then
+            local workspace = game:GetService("Workspace")
+local antivoidKYK = Instance.new("Part", workspace)
+antivoidKYK.CanCollide = true
+antivoidKYK.Anchored = true
+antivoidKYK.CFrame = CFrame.new(23.2798462, -19.8447475, 1.83554196, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK.Size = Vector3.new(1139.2593994140625, 1.5, 2048)
+antivoidKYK.Name = "antivoidKYK"
+antivoidKYK.Transparency = 0.5
+local antivoidKYK2 = Instance.new("Part", workspace)
+antivoidKYK2.CanCollide = true
+antivoidKYK2.Anchored = true
+antivoidKYK2.CFrame = CFrame.new(-458.458344, -9.25, 1.83554196, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK2.Size = Vector3.new(1139.2593994140625, 1.5, 2048)
+antivoidKYK2.Name = "antivoidKYK2"
+antivoidKYK2.Transparency = 0.5
+local antivoidKYK3 = Instance.new("Part", workspace)
+antivoidKYK3.CanCollide = true
+antivoidKYK3.Anchored = true
+antivoidKYK3.CFrame = CFrame.new(-690.65979, 47.25, 1.83554196, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK3.Size = Vector3.new(674.8563232421875, 0.6048492789268494, 2048)
+antivoidKYK3.Name = "antivoidKYK3"
+antivoidKYK3.Transparency = 0.5
+local antivoidKYK4 = Instance.new("Part", workspace)
+antivoidKYK4.CanCollide = true
+antivoidKYK4.Anchored = true
+antivoidKYK4.CFrame = CFrame.new(402.964996, 29.25, 222.310089, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK4.Size = Vector3.new(379.88922119140625, 1.5, 160.8837127685547)
+antivoidKYK4.Name = "antivoidKYK4"
+antivoidKYK4.Transparency = 0.5
+local antivoidKYK6 = Instance.new("Part", workspace)
+antivoidKYK6.CanCollide = true
+antivoidKYK6.Anchored = true
+antivoidKYK6.CFrame = CFrame.new(178.719162, -18.9417267, 1.83554196, -0.989596844, -0.143868446, 0, 0.143868446, -0.989596844, 0, 0, 0, 1)
+antivoidKYK6.Size = Vector3.new(143.94830322265625, 1.5, 2048)
+antivoidKYK6.Name = "antivoidKYK6"
+antivoidKYK6.Transparency= 0.5
+local antivoidKYK7 = Instance.new("Part", workspace)
+antivoidKYK7.CanCollide = true
+antivoidKYK7.Anchored = true
+antivoidKYK7.CFrame = CFrame.new(-309.152832, 15.4761791, 1.83554196, -0.816968799, -0.576681912, 0, 0.576681912, -0.816968799, 0, 0, 0, 1)
+antivoidKYK7.Size = Vector3.new(110.13511657714844, 2.740000009536743, 2048)
+antivoidKYK7.Name = "antivoidKYK7"
+antivoidKYK7.Transparency = 0.5
+local antivoidKYK8 = Instance.new("Part", workspace)
+antivoidKYK8.CanCollide = true
+antivoidKYK8.Anchored = true
+antivoidKYK8.CFrame = CFrame.new(174.971924, 5.34897423, 222.310089, -0.838688731, 0.544611216, 0, -0.544611216, -0.838688731, 0, 0, 0, 1)
+antivoidKYK8.Size = Vector3.new(89.76103210449219, 1.5, 160.8837127685547)
+antivoidKYK8.Name = "antivoidKYK8"
+antivoidKYK8.Transparency = 0.5
+local antivoidKYK9 = Instance.new("Part", workspace)
+antivoidKYK9.CanCollide = true
+antivoidKYK9.Anchored = true
+antivoidKYK9.CFrame = CFrame.new(402.965027, 5.49165154, 74.8157959, 2.98023224e-05, -1.14142895e-05, -1, -0.668144584, -0.744031429, -1.14142895e-05, -0.744031489, 0.668144584, -2.98023224e-05)
+antivoidKYK9.Size = Vector3.new(74.23055267333984, 1, 379.88922119140625)
+antivoidKYK9.Name = "antivoidKYK9"
+antivoidKYK9.Transparency = 0.5
+local antivoidKYK10 = Instance.new("Part", workspace)
+antivoidKYK10.CanCollide = true
+antivoidKYK10.Anchored = true
+antivoidKYK10.CFrame = CFrame.new(402.964996, 29.9136467, 121.981705, -1, 0, 0, 0, -1, 0, 0, 0, 1)
+antivoidKYK10.Size = Vector3.new(379.88922119140625, 1.5, 39.77305603027344)
+antivoidKYK10.Name = "antivoidKYK10"
+antivoidKYK10.Transparency = 0.5
+local antivoidKYK11 = Instance.new("WedgePart", workspace)
+antivoidKYK11.CanCollide = true
+antivoidKYK11.Anchored = true
+antivoidKYK11.CFrame = CFrame.new(134.084229, -17.8583984, 94.3953705, 0.541196942, -0.354067981, 0.762719929, -0.840263784, -0.192543149, 0.506837189, -0.0325982571, -0.915184677, -0.401714325)
+antivoidKYK11.Size = Vector3.new(1, 88.66793823242188, 34.42972946166992)
+antivoidKYK11.Name = "antivoidKYK11"
+antivoidKYK11.Transparency = 0.5
+local antivoidKYK12 = Instance.new("WedgePart", workspace)
+antivoidKYK12.CanCollide = true
+antivoidKYK12.Anchored = true
+antivoidKYK12.CFrame = CFrame.new(168.441879, 2.46393585, 125.815231, -0.350553155, -0.534268022, 0.769201458, -0.198098332, 0.845035911, 0.496660322, -0.915352523, 0.0217281878, -0.402067661)
+antivoidKYK12.Size = Vector3.new(1, 0.9999924302101135, 82.1865463256836)
+antivoidKYK12.Name = "antivoidKYK12"
+antivoidKYK12.Transparency = 0.5
+local antivoidKYK13 = Instance.new("WedgePart", workspace)
+antivoidKYK13.CanCollide = true
+antivoidKYK13.Anchored = true
+antivoidKYK13.CFrame = CFrame.new(206.315063, 26.9295502, 105.471031, 0.534210563, -0.415855825, -0.73599112, -0.845072925, -0.285055399, -0.452321947, -0.021697551, 0.863601387, -0.503708005)
+antivoidKYK13.Size = Vector3.new(1, 13.53612232208252, 9.847718238830566)
+antivoidKYK13.Name = "antivoidKYK13"
+antivoidKYK13.Transparency = 0.5
+local antivoidKYK14 = Instance.new("WedgePart", workspace)
+antivoidKYK14.CanCollide = true
+antivoidKYK14.Anchored = true
+antivoidKYK14.CFrame = CFrame.new(165.965088, 2.12955856, 77.8575592, -0.53421092, -0.415855944, 0.735991359, 0.845073164, -0.285055757, 0.452322066, 0.0216975808, 0.863601625, 0.503708005)
+antivoidKYK14.Size = Vector3.new(1, 13.53612232208252, 99.8001480102539)
+antivoidKYK14.Name = "antivoidKYK14"
+antivoidKYK14.Transparency = 0.5
+local antivoidKYK15 = Instance.new("WedgePart", workspace)
+antivoidKYK15.CanCollide = true
+antivoidKYK15.Anchored = true
+antivoidKYK15.CFrame = CFrame.new(172.67041, 5.49164963, 74.8157959, -4.58955765e-05, 2.05039978e-05, 1, 0.743987858, 0.668193102, 2.05039978e-05, -0.668193102, 0.743987858, -4.58955765e-05)
+antivoidKYK15.Size = Vector3.new(1, 74.23055267333984, 80.699951171875)
+antivoidKYK15.Name = "antivoidKYK15"
+antivoidKYK15.Transparency = 0.5
+local antivoidKYK16 = Instance.new("WedgePart", workspace)
+antivoidKYK16.CanCollide = true
+antivoidKYK16.Anchored = true
+antivoidKYK16.CFrame = CFrame.new(212.753906, 30.0632439, 121.981705, -0.283976078, -0.95883137, 0, 0.95883137, -0.283976078, 0, 0, 0, 1)
+antivoidKYK16.Size = Vector3.new(1, 0.8520558476448059, 39.773048400878906)
+antivoidKYK16.Name = "antivoidKYK16"
+antivoidKYK16.Transparency = 0.5
+local antivoidKYK17 = Instance.new("WedgePart", workspace)
+antivoidKYK17.CanCollide = true
+antivoidKYK17.Anchored = true
+antivoidKYK17.CFrame = CFrame.new(212.884216, 30.1233234, 121.984734, 0.544644356, 0.33412537, -0.769235253, -0.838644743, 0.223680317, -0.496630788, 0.00612583756, 0.915602207, 0.402038693)
+antivoidKYK17.Size = Vector3.new(1, 36.08900451660156, 16.739320755004883)
+antivoidKYK17.Name = "antivoidKYK17"
+antivoidKYK17.Transparency = 0.5
+local antivoidKYK18 = Instance.new("WedgePart", workspace)
+antivoidKYK18.CanCollide = true
+antivoidKYK18.Anchored = true
+antivoidKYK18.CFrame = CFrame.new(174.83577, 5.55865097, 141.871262, -0.544644356, 0.33412537, 0.769235253, 0.838644743, 0.223680317, 0.496630788, -0.00612583756, 0.915602207, -0.402038693)
+antivoidKYK18.Size = Vector3.new(1, 36.08900451660156, 82.1865463256836)
+antivoidKYK18.Name = "antivoidKYK18"
+antivoidKYK18.Transparency = 0.5
+local antivoidKYK19 = Instance.new("WedgePart", workspace)
+antivoidKYK19.CanCollide = true
+antivoidKYK19.Anchored = true
+antivoidKYK19.CFrame = CFrame.new(165.427338, 2.97219658, 77.884697, -0.541196942, -0.354067981, -0.762719929, 0.840263784, -0.192543149, -0.506837189, 0.0325982571, -0.915184677, 0.401714325)
+antivoidKYK19.Size = Vector3.new(1, 88.66793823242188, 47.76289749145508)
+antivoidKYK19.Name = "antivoidKYK19"
+antivoidKYK19.Transparency = 0.5
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro6KYK"
+block.Size = Vector3.new(460, 3, 150) 
+block.Transparency = 0.5
+block.CanCollide = true
+block.Anchored = true 
+block.Position = Vector3.new(-27815.248, 162.506134, 4834.07471, -1.3038516e-07, -8.49145394e-08, 1, 2.64238391e-08, 1, 8.49145394e-08, -1, 2.64238498e-08, -1.3038516e-07)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro5KYK"
+block.Size = Vector3.new(500, 3, 150) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-27965.0977, 35.1371307, 4834.51074, 1, 0, 0, 0, 1, 0, 0, 0, 1) 
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro4KYK"
+block.Size = Vector3.new(1000, 5, 500) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-28030.8477, -93.4633942, 4950.85986, -1.1920929e-07, 0, -1.00000012, 0, 1, 0, 1.00000012, 0, -1.1920929e-07)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro3KYK"
+block.Size = Vector3.new(100, 5, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(-28030.6484, -219.863602, 4836.85986, 0, 0, 1, 0, 1, -0, -1, 0, 0)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetro2KYK"
+block.Size = Vector3.new(1000, 2, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-16906.6445, 770.000549, 4719.68848, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+block.Parent = game.Workspace
+-------------------------------------------------------------------------------------------------
+local block = Instance.new("Part")
+block.Name = "AntiVoidRetroKYK"
+block.Size = Vector3.new(1000, 2, 1000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(-16874.8262, -7.55000019, 4799.2666)
+block.Parent = game.Workspace
+local block = Instance.new("Part")
+block.Name = "AntiVoidPsychoKYK"
+block.Size = Vector3.new(2000, 1, 1000) 
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true 
+block.Position = Vector3.new(17800.9082, 2947, -226.017517, -0.248515129, 0.00487846136, -0.968615651, 0.966844261, -0.0594091415, -0.248359889, -0.0587562323, -0.998221755, 0.0100474358)
+block.Parent = game.Workspace
+local block = Instance.new("Part")
+block.Name = "AntiVoidBAKYK"
+block.Size = Vector3.new(2000, 10, 2000)
+block.Transparency = 0.5 
+block.CanCollide = true 
+block.Anchored = true
+block.Position = Vector3.new(3500, 74.5, 0)
+block.Parent = game.Workspace
+        else
+            local antivoidList = {
+                "antivoidKYK",
+                "AntiVoidPsychoKYK",
+                "AntiVoidRetro2KYK",
+                "AntiVoidRetro3KYK",
+                "AntiVoidRetro4KYK",
+                "AntiVoidRetro5KYK",
+                "AntiVoidRetro6KYK",
+                "AntiVoidBAKYK",
+                "AntiVoidRetroKYK",
+                "antivoidKYK2",
+                "antivoidKYK3",
+                "antivoidKYK4",
+                "antivoidKYK6",
+                "antivoidKYK7",
+                "antivoidKYK8",
+                "antivoidKYK9",
+                "antivoidKYK10",
+                "antivoidKYK11",
+                "antivoidKYK12",
+                "antivoidKYK13",
+                "antivoidKYK14",
+                "antivoidKYK15",
+                "antivoidKYK16",
+                "antivoidKYK17",
+                "antivoidKYK18",
+                "antivoidKYK19"
+            }
+            
+            for _, antivoidName in ipairs(antivoidList) do
+                local block = game.Workspace:FindFirstChild(antivoidName)
+                if block then
+                    block:Destroy()
+                end
+            end
+        end
+    end)
     
     Section:NewToggle("Anti Ragdoll", "Character Reset", function(state)
         getgenv().antiragdolsb = state
@@ -3877,7 +4417,7 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
             ['Content-Type'] = 'application/json'
         },
         Body = HttpService:JSONEncode({
-            ["content"] = "# ▬▬▬▬▬▬testhub▬▬",
+            ["content"] = "# ▬▬▬▬▬▬▬▬",
             ["embeds"] = {{
                 ["title"] = "**Your Script For Slap Battles Has Been Executed!**",
                 ["description"] = "**"..game.Players.LocalPlayer.Name.. "** *with Id* **"..game.Players.LocalPlayer.UserId.. "** *has executed your script in* **"..GameName.."** *!*",

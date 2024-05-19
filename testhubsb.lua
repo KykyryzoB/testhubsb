@@ -120,6 +120,26 @@ if game.PlaceId == 6403373529 then
         task.wait(0.2)
         end
     end)
+
+    local Section = Tab:NewSection("Spam Admin Ability")
+
+    Section:NewDropdown("Choose Ability", "All Glove", {"Anvil", "Fling", "Invisibility"}, function(currentOption)
+        spamadminab = currentOption
+    end)
+
+    Section:NewToggle("Spam Admin", "All Glove", function(state)
+        getgenv().spamadmin = state
+        while getgenv().spamadmin do
+            if spamadminab == "Anvil" then
+                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Anvil")
+            elseif spamadminab == "Fling" then
+                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Fling")
+            elseif spamadminab == "Invisibility" then
+                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Invisibility")
+            end
+        task.wait(0.2)
+        end
+    end)
     
     local Section = Tab:NewSection("Spam Null")
     

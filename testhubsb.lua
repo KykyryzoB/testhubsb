@@ -123,8 +123,8 @@ if game.PlaceId == 6403373529 then
 
     local Section = Tab:NewSection("Spam Admin Ability")
 
-    Section:NewDropdown("Choose Ability", "All Glove", {"Anvil", "Fling", "Invisibility"}, function(k)
-        spamadminab = k
+    Section:NewDropdown("Choose Ability", "All Glove", {"Anvil", "Fling", "Invisibility"}, function(currentOption)
+        spamadminab = currentOption
     end)
 
     Section:NewToggle("Spam Admin", "All Glove", function(state)

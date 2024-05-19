@@ -10,188 +10,6 @@ if game.PlaceId == 6403373529 then
     local decal = Instance.new("Decal", safeport)
     decal.Face = "Top"
     decal.Texture = "rbxassetid://17047840821"
-    
-    gh = {
-        ["Default"] = game:GetService("ReplicatedStorage"):WaitForChild("b"),
-        ["Extended"] = game:GetService("ReplicatedStorage"):WaitForChild("b"),
-        -----------// Glove Hit General Or New Glove \\-----------
-        ["Frostbite"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["T H I C K"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Squid"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Gummy"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["RNG"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Tycoon"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Charge"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Baller"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Tableflip"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Booster"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Shield"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Track"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Goofy"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Confusion"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Elude"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Glitch"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Snowball"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["fish"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Killerfish"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["🗿"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Obby"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Voodoo"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Leash"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Flamarang"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Berserk"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Quake"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Rattlebones"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Chain"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Ping Pong"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Whirlwind"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Slicer"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Counter"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Hammer"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Excavator"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Home Run"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Psycho"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Kraken"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Gravity"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Lure"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Jebaited"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Meteor"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Tinkerer"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),    
-        ["Guardian Angel"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Sun"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Necromancer"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Zombie"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Dual"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Alchemist"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Parry"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Druid"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Oven"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Jester"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Ferryman"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Scythe"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Blackhole"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Santa"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Grapple"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Iceskate"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Pan"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Blasphemy"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Blink"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Ultra Instinct"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Admin"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Prop"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Joust"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Slapstick"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Firework"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Run"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Beatdown"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["L.O.L.B.O.M.B"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Glovel"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Chicken"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Divebomb"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Lamp"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Pocket"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["BONK"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Knockoff"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        ["Divert"] = game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"),
-        -----------// Glove Hit Normal Or New Glove \\-----------
-        ["ZZZZZZZ"] = game:GetService("ReplicatedStorage"):WaitForChild("ZZZZZZZHit"),
-        ["Brick"] = game:GetService("ReplicatedStorage"):WaitForChild("BrickHit"),
-        ["Snow"] = game:GetService("ReplicatedStorage"):WaitForChild("SnowHit"),
-        ["Pull"] = game:GetService("ReplicatedStorage"):WaitForChild("PullHit"),
-        ["Flash"] = game:GetService("ReplicatedStorage"):WaitForChild("FlashHit"),
-        ["Spring"] = game:GetService("ReplicatedStorage"):WaitForChild("springhit"),
-        ["Swapper"] = game:GetService("ReplicatedStorage"):WaitForChild("HitSwapper"),
-        ["Bull"] = game:GetService("ReplicatedStorage"):WaitForChild("BullHit"),
-        ["Dice"] = game:GetService("ReplicatedStorage"):WaitForChild("DiceHit"),
-        ["Ghost"] = game:GetService("ReplicatedStorage"):WaitForChild("GhostHit"),
-        ["Thanos"] = game:GetService("ReplicatedStorage"):WaitForChild("ThanosHit"),
-        ["Stun"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Za Hando"] = game:GetService("ReplicatedStorage"):WaitForChild("zhramt"),
-        ["Fort"] = game:GetService("ReplicatedStorage"):WaitForChild("Fort"),
-        ["Magnet"] = game:GetService("ReplicatedStorage"):WaitForChild("MagnetHIT"),
-        ["Pusher"] = game:GetService("ReplicatedStorage"):WaitForChild("PusherHit"),
-        ["Anchor"] = game:GetService("ReplicatedStorage"):WaitForChild("hitAnchor"),
-        ["Space"] = game:GetService("ReplicatedStorage"):WaitForChild("HtSpace"),
-        ["Boomerang"] = game:GetService("ReplicatedStorage"):WaitForChild("BoomerangH"),
-        ["Speedrun"] = game:GetService("ReplicatedStorage"):WaitForChild("Speedrunhit"),
-        ["Mail"] = game:GetService("ReplicatedStorage"):WaitForChild("MailHit"),
-        ["Golden"] = game:GetService("ReplicatedStorage"):WaitForChild("GoldenHit"),
-        ["Cheeky"] = game:GetService("ReplicatedStorage"):WaitForChild("CheekyHit"),
-        ["Reaper"] = game:GetService("ReplicatedStorage"):WaitForChild("ReaperHit"),
-        ["Replica"] = game:GetService("ReplicatedStorage"):WaitForChild("ReplicaHit"),
-        ["Defense"] = game:GetService("ReplicatedStorage"):WaitForChild("DefenseHit"),
-        ["Killstreak"] = game:GetService("ReplicatedStorage"):WaitForChild("KSHit"),
-        ["Reverse"] = game:GetService("ReplicatedStorage"):WaitForChild("ReverseHit"),
-        ["Shukuchi"] = game:GetService("ReplicatedStorage"):WaitForChild("ShukuchiHit"),
-        ["Duelist"] = game:GetService("ReplicatedStorage"):WaitForChild("DuelistHit"),
-        ["woah"] = game:GetService("ReplicatedStorage"):WaitForChild("woahHit"),
-        ["Ice"] = game:GetService("ReplicatedStorage"):WaitForChild("IceHit"),
-        ["Adios"] = game:GetService("ReplicatedStorage"):WaitForChild("hitAdios"),
-        ["Blocked"] = game:GetService("ReplicatedStorage"):WaitForChild("BlockedHit"),
-        ["Engineer"] = game:GetService("ReplicatedStorage"):WaitForChild("engiehit"),
-        ["Rocky"] = game:GetService("ReplicatedStorage"):WaitForChild("RockyHit"),
-        ["Conveyor"] = game:GetService("ReplicatedStorage"):WaitForChild("ConvHit"),
-        ["STOP"] = game:GetService("ReplicatedStorage"):WaitForChild("STOP"),
-        ["Phantom"] = game:GetService("ReplicatedStorage"):WaitForChild("PhantomHit"),
-        ["Wormhole"] = game:GetService("ReplicatedStorage"):WaitForChild("WormHit"),
-        ["Acrobat"] = game:GetService("ReplicatedStorage"):WaitForChild("AcHit"),
-        ["Plague"] = game:GetService("ReplicatedStorage"):WaitForChild("PlagueHit"),
-        ["[REDACTED]"] = game:GetService("ReplicatedStorage"):WaitForChild("ReHit"),
-        ["bus"] = game:GetService("ReplicatedStorage"):WaitForChild("hitbus"),
-        ["Phase"] = game:GetService("ReplicatedStorage"):WaitForChild("PhaseH"),
-        ["Warp"] = game:GetService("ReplicatedStorage"):WaitForChild("WarpHt"),
-        ["Bomb"] = game:GetService("ReplicatedStorage"):WaitForChild("BombHit"),
-        ["Bubble"] = game:GetService("ReplicatedStorage"):WaitForChild("BubbleHit"),
-        ["Jet"] = game:GetService("ReplicatedStorage"):WaitForChild("JetHit"),
-        ["Shard"] = game:GetService("ReplicatedStorage"):WaitForChild("ShardHIT"),
-        ["potato"] = game:GetService("ReplicatedStorage"):WaitForChild("potatohit"),
-        ["CULT"] = game:GetService("ReplicatedStorage"):WaitForChild("CULTHit"),
-        ["bob"] = game:GetService("ReplicatedStorage"):WaitForChild("bobhit"),
-        ["Buddies"] = game:GetService("ReplicatedStorage"):WaitForChild("buddiesHIT"),
-        ["Spy"] = game:GetService("ReplicatedStorage"):WaitForChild("SpyHit"),
-        ["Detonator"] = game:GetService("ReplicatedStorage"):WaitForChild("DetonatorHit"),
-        ["Rage"] = game:GetService("ReplicatedStorage"):WaitForChild("GRRRR"),
-        ["Trap"] = game:GetService("ReplicatedStorage"):WaitForChild("traphi"),
-        ["Orbit"] = game:GetService("ReplicatedStorage"):WaitForChild("Orbihit"),
-        ["Hybrid"] = game:GetService("ReplicatedStorage"):WaitForChild("HybridCLAP"),
-        ["Slapple"] = game:GetService("ReplicatedStorage"):WaitForChild("SlappleHit"),
-        ["Disarm"] = game:GetService("ReplicatedStorage"):WaitForChild("DisarmH"),
-        ["Dominance"] = game:GetService("ReplicatedStorage"):WaitForChild("DominanceHit"),
-        ["Link"] = game:GetService("ReplicatedStorage"):WaitForChild("LinkHit"),
-        ["Rojo"] = game:GetService("ReplicatedStorage"):WaitForChild("RojoHit"),
-        ["rob"] = game:GetService("ReplicatedStorage"):WaitForChild("robhit"),
-        ["Rhythm"] = game:GetService("ReplicatedStorage"):WaitForChild("rhythmhit"),
-        ["Nightmare"] = game:GetService("ReplicatedStorage"):WaitForChild("nightmarehit"),
-        ["Hitman"] = game:GetService("ReplicatedStorage"):WaitForChild("HitmanHit"),
-        ["Thor"] = game:GetService("ReplicatedStorage"):WaitForChild("ThorHit"),
-        ["Retro"] = game:GetService("ReplicatedStorage"):WaitForChild("RetroHit"),
-        ["Cloud"] = game:GetService("ReplicatedStorage"):WaitForChild("CloudHit"),
-        ["Null"] = game:GetService("ReplicatedStorage"):WaitForChild("NullHit"),
-        ["spin"] = game:GetService("ReplicatedStorage"):WaitForChild("spinhit"),
-        -----------// Glove Hit Stun \\-----------
-        ["Kinetic"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Recall"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Balloony"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Sparky"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Boogie"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Stun"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        ["Coil"] = game:GetService("ReplicatedStorage"):WaitForChild("HtStun"),
-        -----------// Glove Hit Diamond \\-----------
-        ["Diamond"] = game:GetService("ReplicatedStorage"):WaitForChild("DiamondHit"),
-        ["Megarock"] = game:GetService("ReplicatedStorage"):WaitForChild("DiamondHit"),
-        -----------// Glove Hit Celestial \\-----------
-        ["Moon"] = game:GetService("ReplicatedStorage"):WaitForChild("CelestialHit"),
-        ["Jupiter"] = game:GetService("ReplicatedStorage"):WaitForChild("CelestialHit"),
-        -----------// Glove Hard \\-----------
-        ["Mitten"] = game:GetService("ReplicatedStorage"):WaitForChild("MittenHit"),
-        ["Hallow Jack"] = game:GetService("ReplicatedStorage"):WaitForChild("HallowHIT"),
-        -----------// Glove Hit Power \\-----------
-        ["OVERKILL"] = game:GetService("ReplicatedStorage"):WaitForChild("Overkillhit"),
-        ["The Flex"] = game:GetService("ReplicatedStorage"):WaitForChild("FlexHit"),
-        ["Custom"] = game:GetService("ReplicatedStorage"):WaitForChild("CustomHit"),
-        ["God's Hand"] = game:GetService("ReplicatedStorage"):WaitForChild("Godshand"),
-        ["Error"] = game:GetService("ReplicatedStorage"):WaitForChild("Errorhit")
-    }
         
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
     
@@ -222,7 +40,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Creator UI and Helper with function")
     
     Section:NewButton("Giangplay", "INFO", function()
-        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay",Icon = "rbxassetid://7733955511",Duration = 10})
+        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay",Icon = "rbxassetid://7733955511",Duration = 5})
     end)
     
     local Section = Tab:NewSection("Discord Server")
@@ -240,7 +58,7 @@ if game.PlaceId == 6403373529 then
     local Section = Tab:NewSection("Youtube")
     
     Section:NewButton("Click to copy", "INFO", function()
-        setclipboard("https://www.youtube.com/channel/UCgqxZ4MrGPp13dlZyotp_fQ")
+        setclipboard('https://www.youtube.com/@KykypyzoB/featured')
     end)
     
     local Tab = Window:NewTab("Combat")
@@ -256,7 +74,7 @@ if game.PlaceId == 6403373529 then
                 if v.Character.Head:FindFirstChild("UnoReverseCard") == nil or game.Players.LocalPlayer.leaderstats.Glove.Value == "Error" then
                     Magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
                     if 25 >= Magnitude then
-                        gh[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(v.Character:WaitForChild("HumanoidRootPart"),true)
+                        shared.gloveHits[game.Players.LocalPlayer.leaderstats.Glove.Value]:FireServer(v.Character:WaitForChild("HumanoidRootPart"),true)
                     end
                 end
             end
@@ -281,6 +99,26 @@ if game.PlaceId == 6403373529 then
     localscriptclone.Parent = tool
     wait(0.1)
     end
+    end)
+
+    local Section = Tab:NewSection("Spam Retro Ability")
+
+    Section:NewToggle("Spam Retro", "All Glove", function(state)
+        getgenv().spamretro = state
+        while getgenv().spamretro do
+            if spretro == "Ban Hammer" then
+                game:GetService("ReplicatedStorage").RetroAbility:FireServer(Ban Hammer)
+            elseif spretro == "Bomb" then
+                game:GetService("ReplicatedStorage").RetroAbility:FireServer(Bomb)
+            elseif spretro == "Rocket Launcher" then
+                game:GetService("ReplicatedStorage").RetroAbility:FireServer(Rocket Launcher)
+            end
+        task.wait()
+        end
+    end)
+
+    Section:NewDropdown("Choose Ability", "All Glove", {"Ban Hammer", "Bomb", "Rocket Launcher"}, function(f)
+        spretro = f
     end)
     
     local Section = Tab:NewSection("Spam Null")
@@ -328,6 +166,30 @@ if game.PlaceId == 6403373529 then
     end)
 
     Person = game.Players.LocalPlayer.Name
+
+    local Section = Tab:NewSection("Spam Ping Pong To Players")
+
+    Section:NewToggle("Spam Ping Pong", "Need Ping Pong", function(state)
+        getgenv().sppingsb = state
+        if game.Players.LocalPlayer.leaderstats.Glove.Value == "Ping Pong" then
+            while getgenv().sppingsb do
+                game:GetService("ReplicatedStorage").GeneralAbility:FireServer()
+                local players = game.Players:GetChildren()
+                local RandomPlayer = players[math.random(1, #players)]
+                repeat RandomPlayer = players[math.random(1, #players)] until RandomPlayer ~= game.Players.LocalPlayer and RandomPlayer.Character:FindFirstChild("rock") == nil and RandomPlayer.Character.Head:FindFirstChild("UnoReverseCard") == nil and RandomPlayer.Character:FindFirstChild("entered")
+                if RandomPlayer ~= game.Players.LocalPlayer.Name and RandomPlayer.Character then
+                    for i,v in pairs(game.Workspace:GetChildren()) do
+                        if v:IsA("Part") and v.Name == game.Players.LocalPlayer.Name.."_PingPongBall" then
+                            v.CFrame = RandomPlayer.Character.HumanoidRootPart.CFrame
+                        end
+                    end
+                end
+            task.wait(0.01)
+            end
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Ping Pong Glove.",Icon = "rbxassetid://7733658504",Duration = 5})
+        end
+    end)
     
     local Section = Tab:NewSection("Spam Shukuchi")
     
@@ -335,27 +197,16 @@ if game.PlaceId == 6403373529 then
         getgenv().spamshuk = state
         if game.Players.LocalPlayer.leaderstats.Glove.Value == "Shukuchi" then
             while getgenv().spamshuk do
-                local player = game.Players.LocalPlayer
-    local nearestPlayer = nil
-    local shortestDistance = math.huge
-    for _, otherPlayer in ipairs(game.Players:GetPlayers()) do
-        if otherPlayer ~= player then
-            local distance = (otherPlayer.Character.HumanoidRootPart.Position - player.Character.HumanoidRootPart.Position).magnitude
-            if distance < shortestDistance then
-                shortestDistance = distance
-                nearestPlayer = otherPlayer
-            end
-        end
-    end
-    
-    if nearestPlayer then
-        local args = {
-            [1] = nearestPlayer
-        }
-        
-        game:GetService("ReplicatedStorage"):WaitForChild("SM"):FireServer(unpack(args))
-    end
-            task.wait(0.2)
+                for i, v in pairs(game.Players:GetPlayers()) do
+                    if v ~= game.Players.LocalPlayer and v.Character then
+                        if v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("rock") == nil and v.Character.HumanoidRootPart.BrickColor ~= BrickColor.new("New Yeller") and v.Character.Ragdolled.Value == false and v.Character.Head:FindFirstChild("RedEye") == nil then
+                            if v.Character.Head:FindFirstChild("UnoReverseCard") == nil then
+                                    game:GetService("ReplicatedStorage"):WaitForChild("SM"):FireServer(v)
+                            end
+                        end
+                    end
+                end
+            task.wait()
             end
         else
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Shukuchi Glove.",Icon = "rbxassetid://7733658504",Duration = 5})
@@ -468,7 +319,7 @@ if game.PlaceId == 6403373529 then
     elseif abc == "Plate" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.Plate.CFrame
     elseif abc == "Battle Arena" then
-    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Battlearena.Arena.CFrame * CFrame.new(0,10,0)
+        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Battlearena.Arena.CFrame * CFrame.new(0,10,0)
     elseif abc == "Default Arena" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(120,364,-3)
     elseif abc == "Normal Arena" then
@@ -495,6 +346,25 @@ end
             end
         task.wait()
         end
+    end)
+
+    local Section = Tab:NewSection("Remove Name Tag")
+    
+    Section:NewToggle("Remove NameTag", "Good For Video", function(state)
+        getgenv().removenametag = state
+        if getgenv().removenametag == false then
+            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = true
+        end
+        while getgenv().removenametag do
+            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = false
+        task.wait(0.3)
+        end
+    end)
+
+    local Section = Tab:NewSection("Glove Equip")
+
+    Section:NewTextBox("Glove Equip", "All Glove", function(txt)
+        fireclickdetector(game.Workspace.Lobby[txt].ClickDetector)
     end)
     
     local Section = Tab:NewSection("Get Infinite Ingredients")
@@ -597,34 +467,57 @@ end
     end
     end)
     
-    local Section = Tab:NewSection("Remove Name Tag")
-    
-    Section:NewToggle("Remove NameTag", "Good For Video", function(state)
-        getgenv().removenametag = state
-        if getgenv().removenametag == false then
-            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = true
-        end
-        while getgenv().removenametag do
-            game.Players.LocalPlayer.Character.Head.Nametag.Enabled = false
-        task.wait(0.3)
-        end
-    end)
-    
     local Section = Tab:NewSection("Get Full Kinetic")
     
     Section:NewButton("Full Kinetic", "Good For Berserk", function()
         if game.Players.LocalPlayer.leaderstats.Glove.Value == "Kinetic" then
         OGL = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
-    for i = 1,100 do
-    game.ReplicatedStorage.SelfKnockback:FireServer({["Force"] = 0,["Direction"] = Vector3.new(0,0.01,0)})
-    wait(0.05)
-    end
+        for i = 1,100 do
+            game.ReplicatedStorage.SelfKnockback:FireServer({["Force"] = 0,["Direction"] = Vector3.new(0,0.01,0)})
+        wait(0.05)
+        end
         else
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Kinetic Glove.",Icon = "rbxassetid://7733658504",Duration = 10})
-    end
+        end
     end)
     
     local Tab = Window:NewTab("Badge")
+
+    local Section = Tab:NewSection("Get Plank Glove")
+
+    Section:NewButton("Get Plank Glove", "Need Fort", function()
+        if game.Players.LocalPlayer.leaderstats.Glove.Value == "Fort" then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8, 97, 4)
+            wait(0.2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = true
+            wait(0.3)
+            game:GetService("ReplicatedStorage").Fortlol:FireServer()
+            wait(3.5)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+            wait(0.1)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(8, 106, -6)
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Fort Glove.",Icon = "rbxassetid://7733658504",Duration = 10})
+        end
+    end)
+
+    local Section = Tab:NewSection("Get Psycho Glove")
+
+    Section:NewButton("Get Psycho Glove", "In Limbo", function()
+        if game.Workspace then
+            workspace.RepressedMemoriesMap.Psychokinesis.Triggers.StartPsychoEvent.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            wait(2.5)
+            workspace.RepressedMemoriesMap.Psychokinesis.Triggers.StartPsychoEvent.CFrame = CFrame.new(17879.957, 2977.60913, -242.609451, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            wait(2.5)
+            workspace.RepressedMemoriesMap.Psychokinesis.Triggers.StopPsychoEvent.CFrame = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+            wait(2.5)
+            workspace.RepressedMemoriesMap.Psychokinesis.Triggers.StopPsychoEvent.CFrame = CFrame.new(17347.5801, 2977.60913, 103.471375, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            wait(2.5)
+            fireclickdetector(workspace.RepressedMemoriesMap.Psychokinesis.Triggers.Psycho.ClickDetector)
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You have not entered Limbo.",Icon = "rbxassetid://7733658504",Duration = 10})
+        end
+    end)
 
     local Section = Tab:NewSection("Get FrostBite Glove")
     
@@ -692,7 +585,7 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
     game:GetService("ReplicatedStorage").IceSkate:FireServer(unpack(args))
     end)
     
-    local Section = Tab:NewSection("Elude & Counter")
+    local Section = Tab:NewSection("Elude & Counter Badge")
 
     Section:NewDropdown("Maze Badge", "Badge", {"Counter", "Elude"}, function(y)
         if y == "Counter" then
@@ -1704,19 +1597,6 @@ block.Parent = game.Workspace
         task.wait()
         end
     end)
-
-    Section:NewToggle("Anti Sbeve", "Antis", function(state)
-        getgenv().antisbevesb = state
-        while getgenv().antisbevesb do
-            for i,v in pairs(game.Players:GetPlayers()) do
-                if v.Character:FindFirstChild("stevebody") then
-                    v.Character:FindFirstChild("stevebody").CanTouch = false
-                    v.Character:FindFirstChild("stevebody").CanQuery = false
-                end
-            end
-        task.wait()
-        end
-    end)
     
     Section:NewToggle("Anti Knockoff", "Antis", function(state)
         getgenv().Antiknokoffsb = state
@@ -1914,8 +1794,12 @@ block.Parent = game.Workspace
                     v.Handle.CFrame = game:GetService("Players").LocalPlayer.Character.HumanoidRootPart.CFrame
                     game:GetService("Players").LocalPlayer.Character.Humanoid:EquipTool(v)
                     game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+                    game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+                    game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
                 end
             end
+            game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
+            game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
             game.Players.LocalPlayer.Character.Humanoid:UnequipTools()
         else
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Wait For Match Started.",Icon = "rbxassetid://7733658504",Duration = 5})
@@ -2099,7 +1983,29 @@ block.Parent = game.Workspace
     tween:Play()
     end
     end)
-    
+
+    local Section = Tab:NewSection("Vote Kick Random Player")
+
+    Section:NewButton("Vote Kick", "In Match", function()
+        local Players = game:GetService("Players")
+        local LocalPlayer = Players.LocalPlayer
+        local otherPlayers = Players:GetPlayers()
+        table.remove(otherPlayers, table.find(otherPlayers, LocalPlayer))
+        if #otherPlayers > 0 then
+          local randomPlayer = otherPlayers[math.random(1, #otherPlayers)]
+          local randomPlayerName = randomPlayer.Name
+          
+          local args = {
+            [1] = randomPlayerName,
+            [2] = false,
+            [3] = 2
+          }
+        
+          game:GetService("ReplicatedStorage"):WaitForChild("Events"):WaitForChild("Votekick"):FireServer(unpack(args))
+        end
+    end)
+
+
     local Section = Tab:NewSection("Unlock Lab")
     
     Section:NewButton("Unlock Lab And Get Chain Glove", "Misc", function()
@@ -2305,6 +2211,7 @@ block.Parent = game.Workspace
                     if v.Name == "Icecube" then
                         v:Destroy()
                         game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+                        game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
                     end
                end
         task.wait()
@@ -2710,6 +2617,8 @@ block.Parent = game.Workspace
     
     elseif game.PlaceId == 13833961666 then
     
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kavo.lua"))()
+
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
     
     local Window = Library.CreateLib("Kykyryz0B Hub | The Dark Realms", "DarkTheme")
@@ -2758,9 +2667,9 @@ block.Parent = game.Workspace
         end
     end)
     
-    local Section = Tab:NewSection("Slap Aura Mini Bob")
+    local Section = Tab:NewSection("Slap Aura")
     
-    Section:NewToggle("Slap Aura Mini Bob", "Antis", function(state)
+    Section:NewToggle("Slap Aura", "ALL GLOVE | Mini bob, players", function(state)
         getgenv().slapminiboba = state
         while getgenv().slapminiboba do
                 if game.Players.LocalPlayer.leaderstats.Glove.Value == "Reaper" then
@@ -3760,9 +3669,9 @@ elseif game.PlaceId == 11520107397 then
         end
     end)
 
-    local Section = Tab:NewSection("Spam")
+    local Section = Tab:NewSection("Spam KS")
 
-    Section:NewToggle("Spam Orb", "Spam Orb", function(state)
+    Section:NewToggle("Spam Orb", "Need 75+ Kills", function(state)
         getgenv().spamorbks = state
         while getgenv().spamorbks do
             game:GetService("ReplicatedStorage").KSABILI:FireServer()
@@ -3770,7 +3679,7 @@ elseif game.PlaceId == 11520107397 then
         end
     end)
 
-    Section:NewToggle("Spam The Force", "Spam", function(state)
+    Section:NewToggle("Spam The Force", "Need 250+ Kills", function(state)
         getgenv().spamtheforceks = state
             while getgenv().spamtheforceks do
                 game:GetService("ReplicatedStorage"):WaitForChild("TheForce"):FireServer()
@@ -3803,6 +3712,26 @@ elseif game.PlaceId == 11520107397 then
     task.wait(0.1)
     end
     end)
+
+    local Section = Tab:NewSection("Spam Rojo")
+
+    Section:NewToggle("Spam Rojo", "All Glove", function(state)
+        getgenv().spamrojosb = state
+        while getgenv().spamrojosb do
+            game:GetService("ReplicatedStorage"):WaitForChild("RojoAbility"):FireServer("Release", {game.Players[Person].Character.HumanoidRootPart.CFrame})
+        task.wait()
+        end
+    end)
+
+    Section:NewTextBox("Spam Rojo Person", "All Glove", function(txt)
+        if txt == "Me" or txt == "me" or txt == "Username" or txt == "" then
+            Person = game.Players.LocalPlayer.Name
+        else
+            Person = txt
+        end
+    end)
+
+    Person = game.Players.LocalPlayer.Name
 
     local Tab = Window:NewTab("Misc")
 
@@ -4405,32 +4334,4 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
         game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You're in the wrong game.",Icon = "rbxassetid://7733658504",Duration = 10})
     end
 
-    local GameName = game:GetService("MarketplaceService"):GetProductInfo(game.PlaceId).Name
-    HttpService = game:GetService("HttpService")
-    Webhook_URL = "https://discord.com/api/webhooks/1231633572453158994/Tbkl1CKYn1KECBNIGul_ZPOtkJ5MoIQJnUm8IzuwPU1wRtugLQepqXznD873nj-bPqjt"
-    
-    local responce = syn.request(
-    {
-        Url = Webhook_URL,
-        Method = 'POST',
-        Headers = {
-            ['Content-Type'] = 'application/json'
-        },
-        Body = HttpService:JSONEncode({
-            ["content"] = "# ▬▬▬▬▬▬▬▬",
-            ["embeds"] = {{
-                ["title"] = "**Your Script For Slap Battles Has Been Executed!**",
-                ["description"] = "**"..game.Players.LocalPlayer.Name.. "** *with Id* **"..game.Players.LocalPlayer.UserId.. "** *has executed your script in* **"..GameName.."** *!*",
-                ["type"] = "rich",
-                ["color"] = tonumber(0x21db46),
-                ["fields"] = {
-                    {
-                        ["name"] = "Hardware ID:",
-                        ["value"] = game:GetService("RbxAnalyticsService"):GetClientId(),
-                        ["inline"] = true
-                    }
-                }
-            }}
-        })
-    }
-    )
+ loadstring(game:HttpGet("https://raw.githubusercontent.com/KykyryzoB/Others-Script/main/SB%20Other.lua"))()

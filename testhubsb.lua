@@ -103,22 +103,22 @@ if game.PlaceId == 6403373529 then
 
     local Section = Tab:NewSection("Spam Retro Ability")
 
+    Section:NewDropdown("DropdownText", "DropdownInf", {"Ban Hammer", "Bomb", "Rocket Launcher"}, function(currentOption)
+        spamretroab = currentOption
+    end)
+
     Section:NewToggle("Spam Retro", "All Glove", function(state)
         getgenv().spamretro = state
         while getgenv().spamretro do
-            if spretro == "Ban Hammer" then
-                game:GetService("ReplicatedStorage").RetroAbility:FireServer(Ban Hammer)
-            elseif spretro == "Bomb" then
-                game:GetService("ReplicatedStorage").RetroAbility:FireServer(Bomb)
-            elseif spretro == "Rocket Launcher" then
-                game:GetService("ReplicatedStorage").RetroAbility:FireServer(Rocket Launcher)
+            if spamretroab == "Ban Hammer" then
+                game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+            elseif spamretroab == "Bomb" then
+                game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
+            elseif spamretroab == "Rocket Launcher" then
+                game:GetService("ReplicatedStorage").RetroAbility:FireServer("Rocket Launcher")
             end
         task.wait()
         end
-    end)
-
-    Section:NewDropdown("Choose Ability", "All Glove", {"Ban Hammer", "Bomb", "Rocket Launcher"}, function(f)
-        spretro = f
     end)
     
     local Section = Tab:NewSection("Spam Null")

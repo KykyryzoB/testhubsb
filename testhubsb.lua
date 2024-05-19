@@ -103,7 +103,7 @@ if game.PlaceId == 6403373529 then
 
     local Section = Tab:NewSection("Spam Retro Ability")
 
-    Section:NewDropdown("DropdownText", "DropdownInf", {"Ban Hammer", "Bomb", "Rocket Launcher"}, function(currentOption)
+    Section:NewDropdown("Choose Ability", "All Glove", {"Ban Hammer", "Bomb", "Rocket Launcher"}, function(currentOption)
         spamretroab = currentOption
     end)
 
@@ -117,7 +117,27 @@ if game.PlaceId == 6403373529 then
             elseif spamretroab == "Rocket Launcher" then
                 game:GetService("ReplicatedStorage").RetroAbility:FireServer("Rocket Launcher")
             end
-        task.wait()
+        task.wait(0.2)
+        end
+    end)
+
+    local Section = Tab:NewSection("Spam Admin Ability")
+
+    Section:NewDropdown("Choose Ability", "All Glove", {"Anvil", "Fling", "Invisibility"}, function(k)
+        spamadminab = k
+    end)
+
+    Section:NewToggle("Spam Admin", "All Glove", function(state)
+        getgenv().spamadmin = state
+        while getgenv().spamadmin do
+            if spamadminab == "Anvil" then
+                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Anvil")
+            elseif spamadminab == "Fling" then
+                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Fling")
+            elseif spamadminab == "Invisibility" then
+                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Invisibility")
+            end
+        task.wait(0.2)
         end
     end)
     

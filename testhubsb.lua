@@ -111,11 +111,23 @@ if game.PlaceId == 6403373529 then
         getgenv().spamretro = state
         while getgenv().spamretro do
             if spamretroab == "Ban Hammer" then
-                game:GetService("ReplicatedStorage").RetroAbility:FireServer("Ban Hammer")
+                local args = {
+                    [1] = "Ban Hammer"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("RetroAbility"):FireServer(unpack(args))
             elseif spamretroab == "Bomb" then
-                game:GetService("ReplicatedStorage").RetroAbility:FireServer("Bomb")
+                local args = {
+                    [1] = "Bomb"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("RetroAbility"):FireServer(unpack(args))
             elseif spamretroab == "Rocket Launcher" then
-                game:GetService("ReplicatedStorage").RetroAbility:FireServer("Rocket Launcher")
+                local args = {
+                    [1] = "Rocket Launcher"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("RetroAbility"):FireServer(unpack(args))
             end
         task.wait(0.2)
         end
@@ -131,11 +143,23 @@ if game.PlaceId == 6403373529 then
         getgenv().spamadmin = state
         while getgenv().spamadmin do
             if spamadminab == "Anvil" then
-                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Anvil")
+                local args = {
+                    [1] = "Anvil"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("AdminAbility"):FireServer(unpack(args))
             elseif spamadminab == "Fling" then
-                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Fling")
+                local args = {
+                    [1] = "Fling"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("AdminAbility"):FireServer(unpack(args))
             elseif spamadminab == "Invisibility" then
-                game:GetService("ReplicatedStorage").AdminAbility:FireServer("Invisibility")
+                local args = {
+                    [1] = "Invisiblity"
+                }
+
+                game:GetService("ReplicatedStorage"):WaitForChild("AdminAbility"):FireServer(unpack(args))
             end
         task.wait(0.2)
         end
@@ -189,7 +213,7 @@ if game.PlaceId == 6403373529 then
 
     local Section = Tab:NewSection("Spam Ping Pong To Players")
 
-    Section:NewToggle("Spam Ping Pong", "Need Ping Pong", function(state)
+    local wtfs = Section:NewToggle("Spam Ping Pong", "Need Ping Pong", function(state)
         getgenv().sppingsb = state
         if game.Players.LocalPlayer.leaderstats.Glove.Value == "Ping Pong" then
             while getgenv().sppingsb do
@@ -208,6 +232,7 @@ if game.PlaceId == 6403373529 then
             end
         else
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Ping Pong Glove.",Icon = "rbxassetid://7733658504",Duration = 5})
+            wtfs:Set(false)
         end
     end)
     

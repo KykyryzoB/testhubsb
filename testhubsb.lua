@@ -213,7 +213,7 @@ if game.PlaceId == 6403373529 then
 
     local Section = Tab:NewSection("Spam Ping Pong To Players")
 
-    local wtfs = Section:NewToggle("Spam Ping Pong", "Need Ping Pong", function(state)
+    Section:NewToggle("Spam Ping Pong", "Need Ping Pong", function(state)
         getgenv().sppingsb = state
         if game.Players.LocalPlayer.leaderstats.Glove.Value == "Ping Pong" then
             while getgenv().sppingsb do
@@ -232,7 +232,6 @@ if game.PlaceId == 6403373529 then
             end
         else
             game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Ping Pong Glove.",Icon = "rbxassetid://7733658504",Duration = 5})
-            wtfs:Set(false)
         end
     end)
     
@@ -360,7 +359,7 @@ if game.PlaceId == 6403373529 then
       elseif abc == "Slapples Isl" then
       game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.island5.Union.CFrame
      elseif abc == "Moai Isl" then
-     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.island4["Big Tree"].Bark.CFrame
+     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.island4["Big Tree"].Bark.CFrame * CFrame.new(3. -4, 0)
     elseif abc == "Plate" then
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = workspace.Arena.Plate.CFrame
     elseif abc == "Battle Arena" then
@@ -527,6 +526,58 @@ end
     end)
     
     local Tab = Window:NewTab("Badge")
+
+    local Section = Tab:NewSection("Get The Schlob Glove")
+
+    Section:NewButton("Get The Schlob Glove", "Need Cloud", function()
+        if game.Players.LocalPlayer.leaderstats.Glove.Value == "Cloud" and not game.Players.LocalPlayer.Character:FindFirstChild("entered") then
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-120.539459, 133.998047, -444.654419)
+            wait(0.1)
+            game:GetService("ReplicatedStorage").CloudAbility:FireServer()
+            fireclickdetector(game.workspace.Lobby.fish.ClickDetector)
+            repeat task.wait() firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.Lobby.Teleport1.TouchInterest.Parent, 0) firetouchinterest(game.Players.LocalPlayer.Character:WaitForChild("Head"), workspace.Lobby.Teleport1.TouchInterest.Parent, 1)
+            until game.Players.LocalPlayer.Character:FindFirstChild("entered")
+            if game.Players.LocalPlayer.Character.Humanoid.Sit == false then
+                for i,v in pairs(game.Workspace:GetChildren()) do
+                    if v.Name == game.Players.LocalPlayer.Name.."_Cloud" and v:FindFirstChild("VehicleSeat") then
+                        game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.VehicleSeat.CFrame
+                        wait(0.3)
+                        game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer()
+                        wait(0.3)
+                        repeat task.wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Arena.Plate.CFrame
+                        until game.Players.LocalPlayer.Character.Ragdolled.Value == false
+                    end
+                end
+            else
+                wait(0.3)
+                game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer()
+                wait(0.3)
+                repeat task.wait() game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.workspace.Arena.Plate.CFrame
+                until game.Players.LocalPlayer.Character.Ragdolled.Value == false
+            end
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Cloud Glove And Located in the Lobby",Icon = "rbxassetid://7733658504",Duration = 10})
+        end
+    end)
+
+    local Section = Tab:NewSection("Get Bomb Glove")
+    
+    Section:NewButton("Get Bomb Glove", "Need Warp and located in arena", function()
+        if game.Players.LocalPlayer.leaderstats.Glove.Value == "Warp" and game.Players.LocalPlayer.Character:FindFirstChild("entered") then
+            local players = game.Players:GetChildren()
+            local RandomPlayer = players[math.random(1, #players)]
+            repeat RandomPlayer = players[math.random(1, #players)] until RandomPlayer ~= game.Players.LocalPlayer and RandomPlayer.Character:FindFirstChild("entered") and RandomPlayer.Character:FindFirstChild("Ragdolled").Value == false
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = RandomPlayer.Character:FindFirstChild("HumanoidRootPart").CFrame
+            wait(0.3)
+            game.ReplicatedStorage.WarpHt:FireServer(RandomPlayer.Character:WaitForChild("HumanoidRootPart"))
+            wait(0.3)
+            game:GetService("ReplicatedStorage").WLOC:FireServer()
+            wait(0.2)
+            game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = game.Workspace.DEATHBARRIER.CFrame
+        else
+            game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "Need Warp Glove And Located in the Arena",Icon = "rbxassetid://7733658504",Duration = 10})
+        end
+    end)
 
     local Section = Tab:NewSection("Get Plank Glove")
 
@@ -1672,6 +1723,20 @@ block.Parent = game.Workspace
             workspace.Arena.CubeOfDeathArea["the cube of death(i heard it kills)"].CanTouch = true
         end
     end)
+
+    Section:NewToggle("Anti Ice", "Antis", function(state)
+        getgenv().antiicesb = state
+        while getgenv().antiicesb do
+            for i,v in pairs(game.Players.LocalPlayer.Character:GetChildren()) do
+                    if v.Name == "Icecube" then
+                    v:Destroy()
+                    game.Players.LocalPlayer.Character.Humanoid.PlatformStand = false
+                    game.Players.LocalPlayer.Character.Humanoid.AutoRotate = true
+                end
+            end
+        task.wait()
+        end
+    end)
     
     local Tab = Window:NewTab("Player")
     
@@ -1901,11 +1966,7 @@ block.Parent = game.Workspace
         end
         while getgenv().istemespsra do
             for i,v in ipairs(game.Workspace.Items:GetChildren()) do
-                if v.Parent.Name == "Backpack" then
-                    if v.ClassName == "Tool" and v:FindFirstChild("Handle") then
-                        v:FindFirstChild("espitemsr"):Destroy()
-                    end
-                elseif v.ClassName == "Tool" and v:FindFirstChild("Handle") and v:FindFirstChild("espitemsr") == nil then
+                if v.ClassName == "Tool" and v:FindFirstChild("Handle") and v:FindFirstChild("espitemsr") == nil then
                     local espitemsr = Instance.new("BillboardGui", v)
                     espitemsr.Adornee = v
                     espitemsr.Name = "espitemsr"
@@ -1959,6 +2020,21 @@ block.Parent = game.Workspace
                     GloExt.TextColor3 = Color3.fromRGB(165,42,42)
                     GloExt.TextStrokeTransparency = 0
                     GloExt.Text = v.Glove.Value
+                end
+                if v ~= game.Players.Loaded and v.Character and v.Character:FindFirstChild("LeftLeg") and v.Character.inMatch.Value == true and v.Character.LeftLeg:FindFirstChild("Nametag1") == nil then
+                    Nametag1 = Instance.new("BillboardGui", v.Character.LeftLeg)
+                    Nametag1.Name = "Nametag1"
+                    Nametag1.Size = UDim2.new(0, 100, 0, 100)
+                    Nametag1.StudsOffset= Vector3.new(0, -1, -1)
+                    Nametag1.AlwaysOnTop = true
+                    GloEx1 = Instance.new("TextLabel", Nametag1)
+                    GloEx1.BackgroundTransparency = 1
+                    GloEx1.Size = UDim2.new(0, 100, 0, 100)
+                    GloEx1.TextSize = 17
+                    GloEx1.Font = Enum.Font.SourceSansSemibold
+                    GloEx1.TextColor3 = Color3.fromRGB(238,201,0)
+                    GloEx1.TextStrokeTransparency = 0
+                    GloEx1.Text = v.Name
                 end
             end
             for i, v in ipairs(game.Players:GetChildren()) do
@@ -3453,9 +3529,10 @@ block.Parent = game.Workspace
         getgenv().slpaaurachrev = state
     
         while getgenv().slpaaurachrev do
+            local asadas = game.Players.LocalPlayer.Character.Highlight.OutlineColor
             for i,v in pairs(game.Players:GetChildren()) do
                 if v ~= game.Players.LocalPlayer and v.Character then
-                    if v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Ragdolled").Value == false then
+                    if v.Character:FindFirstChild("HumanoidRootPart") and v.Character:FindFirstChild("Ragdolled").Value == false and asadas ~= v.Character.Highlight.OutlineColor then
                         Magnitude = (game.Players.LocalPlayer.Character.HumanoidRootPart.Position - v.Character.HumanoidRootPart.Position).Magnitude
                         if 25 >= Magnitude then
                             game:GetService("ReplicatedStorage"):WaitForChild("GeneralHit"):FireServer(v.Character:WaitForChild("HumanoidRootPart"))
@@ -3466,6 +3543,26 @@ block.Parent = game.Workspace
         task.wait()
         end
     end)
+
+    local Section = Tab:NewSection("Spam Snow Ball Players")
+
+    Section:NewToggle("Spam Snow Ball", "Spam", function(state)
+        getgenv().spamsnowball = state
+        while true do
+            for i, v in pairs(game.Players:GetChildren()) do
+                if v ~= game.Players.LocalPlayer and v.Character then
+                    local args = {
+                        [1] = 250,
+                        [2] = Vector3.new(151.39553833007812, 185.8904266357422, -108.95265197753906),
+                        [3] = game.Players.baconsGood2138.Character.HumanoidRootPart.CFrame
+                    }
+                    
+                    game:GetService("ReplicatedStorage"):WaitForChild("GeneralAbility"):FireServer(unpack(args))
+                end
+            end
+        task.wait()
+        end
+    end)                    
     
     local Tab = Window:NewTab("Misc")
     
@@ -4374,6 +4471,241 @@ for i,v in ipairs(game:GetService("Workspace"):GetDescendants()) do
         Icons = "rbxassetid://16393121436",
         Rainbow = true
     })
+
+    elseif game.PlaceId == 18550498098 then
+
+        local safeport = Instance.new("Part", Workspace)
+        safeport.Name = "SafePort15"
+        safeport.Size = Vector3.new(2000, 10, 2000) 
+        safeport.Transparency = 0.5 
+        safeport.CanCollide = true
+        safeport.Anchored = true
+        safeport.CFrame = CFrame.new(595, 120, -330)
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
+    
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kavo.lua"))()
+    
+    local Window = Library.CreateLib("Kykyryz0B Hub | The Guide Boss Fight", "DarkTheme")
+    
+    local Tab = Window:NewTab("INFO")
+    
+    local Section = Tab:NewSection("Creator")
+    
+    Section:NewButton("Click to copy", "if you have bug and ideas dm me", function()
+        setclipboard('kykyryzo8')
+    end)
+    
+    local Section = Tab:NewSection("Creator UI and Helper with function")
+    
+    Section:NewButton("Giangplay", "INFO", function()
+        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+    end)
+    
+    local Section = Tab:NewSection("Discord Server")
+    
+    Section:NewButton("Click to copy", "INFO", function()
+        setclipboard('https://discord.gg/TjSpKFNnN3')
+    end)
+    
+    local Section = Tab:NewSection("Telegram")
+    
+    Section:NewButton("Click to copy", "INFO", function()
+        setclipboard("https://t.me/Kykyryz0B")
+    end)
+    
+    local Section = Tab:NewSection("Youtube")
+    
+    Section:NewButton("Click to copy", "INFO", function()
+        setclipboard("https://www.youtube.com/channel/UCgqxZ4MrGPp13dlZyotp_fQ")
+    end)
+
+    local Tab = Window:NewTab("Combat")
+
+    local Section = Tab:NewSection("Auto Slap")
+
+    Section:NewToggle("Auto Slap Golem", ".", function(state)
+        getgenv().autoslapgolem = state
+        while getgenv().autoslapgolem do
+            if game.Players.LocalPlayer.Backpack:FindFirstChild("Lantern") then 
+                game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack.Lantern) 
+            end
+            if game.Players.LocalPlayer.Character:FindFirstChild("Lantern") then 
+                ----
+            end
+            for i,v in pairs(game.workspace:GetChildren()) do
+                if v.Name == "golem" and v:FindFirstChild("Hitbox") then
+                    game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+                    local args = {
+                        [1] = "Hit",
+                        [2] = v.Hitbox
+                    }
+            
+                    game.Players.LocalPlayer.Character.Lantern.Network:FireServer(unpack(args))
+                end
+            end
+        task.wait()
+        end
+    end)
+
+    Section:NewToggle("Auto Slap Track", ".", function(state)
+        getgenv().autoslaptrack = state
+        while getgenv().autoslaptrack do
+            if game.Players.LocalPlayer.Backpack:FindFirstChild("Lantern") then 
+                game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack.Lantern) 
+            end
+            if game.Players.LocalPlayer.Character:FindFirstChild("Lantern") then 
+                ----
+            end
+            for i,v in pairs(game.workspace:GetChildren()) do
+                if v.Name == "TrackGloveMissile" then
+                    game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+                    local args = {
+                        [1] = "Hit",
+                        [2] = v
+                    }
+            
+                    game.Players.LocalPlayer.Character.Lantern.Network:FireServer(unpack(args))
+                end
+            end
+        task.wait()
+        end
+    end)
+
+    Section:NewToggle("Auto Slap Replica NPC", "/", function(state)
+        getgenv().autoslapreplicanpc = state
+        while getgenv().autoslapreplicanpc do
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("Lantern") then 
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack.Lantern) 
+        end
+        if game.Players.LocalPlayer.Character:FindFirstChild("Lantern") then 
+            ----
+        end
+        for i,v in pairs(game.workspace:GetChildren()) do
+            if v.Name == "ReplicaNPC" and v:FindFirstChild("HumanoidRootPart") then
+                game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+                local args = {
+                    [1] = "Hit",
+                    [2] = v.HumanoidRootPart
+                }
+        
+                game.Players.LocalPlayer.Character.Lantern.Network:FireServer(unpack(args))
+            end
+        end
+        task.wait()
+    end
+end)
+
+Section:NewToggle("Auto Slap Guide", "/", function(state)
+    getgenv().autoslapguide = state
+    while getgenv().autoslapguide do
+        if game.Players.LocalPlayer.Backpack:FindFirstChild("Lantern") then 
+            game.Players.LocalPlayer.Character.Humanoid:EquipTool(game.Players.LocalPlayer.Backpack.Lantern) 
+        end
+        if game.Players.LocalPlayer.Character:FindFirstChild("Lantern") then 
+            ----
+        end
+        for i,v in pairs(game.workspace:GetChildren()) do
+            if v.Name == "GuideNPC" and v:FindFirstChild("HumanoidRootPart") then
+                game.Players.LocalPlayer.Character:FindFirstChildWhichIsA("Tool"):Activate()
+                local args = {
+                    [1] = "Hit",
+                    [2] = v.HumanoidRootPart
+                }
+        
+                game.Players.LocalPlayer.Character.Lantern.Network:FireServer(unpack(args))
+            end
+        end
+    task.wait()
+    end
+end)
+
+local Tab = Window:NewTab("Misc")
+
+local Section = Tab:NewSection("Teloport")
+
+Section:NewButton("Get 4 HP", "/", function()
+    ogl = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3271.42334, -218.088181, 822.746155, -0.994649589, 0.00018143536, 0.103305899, -8.53231885e-09, 0.99999845, -0.00175637181, -0.103306055, -0.00174697535, -0.994648099)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ogl
+end)
+
+Section:NewButton("Get Regeneration", "/", function()
+    ogl = game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3286.16675, -67.2077789, 823.898865, -0.98922509, -0.00276089297, 0.146376535, 9.32137123e-09, 0.99982214, 0.0188582912, -0.146402568, 0.0186550952, -0.989049196)
+    wait(0.5)
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = ogl
+end)
+
+Section:NewButton("TP to lever", "/", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(3267.97485, -72.9661789, 823.711304, -0.00727955392, 0.085996896, -0.996268809, 8.27937185e-09, 0.996295214, 0.0859991759, 0.999973476, 0.000626027409, -0.00725258561)
+end)
+
+Section:NewButton("Tp to SafePort", ".", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(595, 122, -330)
+end)
+
+elseif game.PlaceId == 18698003301 then
+
+    game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
+    
+    local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Giangplay/Script/main/Kavo.lua"))()
+    
+    local Window = Library.CreateLib("Kykyryz0B Hub | Slap League", "DarkTheme")
+    
+    local Tab = Window:NewTab("INFO")
+    
+    local Section = Tab:NewSection("Creator")
+    
+    Section:NewButton("Click to copy", "if you have bug and ideas dm me", function()
+        setclipboard('kykyryzo8')
+    end)
+    
+    local Section = Tab:NewSection("Creator UI and Helper with function")
+    
+    Section:NewButton("Giangplay", "INFO", function()
+        game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Creator UI",Text = "Giangplay.",Icon = "rbxassetid://7733955511",Duration = 10})
+    end)
+    
+    local Section = Tab:NewSection("Discord Server")
+    
+    Section:NewButton("Click to copy", "INFO", function()
+        setclipboard('https://discord.gg/TjSpKFNnN3')
+    end)
+    
+    local Section = Tab:NewSection("Telegram")
+    
+    Section:NewButton("Click to copy", "INFO", function()
+        setclipboard("https://t.me/Kykyryz0B")
+    end)
+    
+    local Section = Tab:NewSection("Youtube")
+    
+    Section:NewButton("Click to copy", "INFO", function()
+        setclipboard("https://www.youtube.com/channel/UCgqxZ4MrGPp13dlZyotp_fQ")
+    end)
+
+    local Tab = Window:NewTab("Combat")
+
+    local Section = Tab:NewSection("Auto Slap")
+
+    Section:NewToggle("Auto Slap Players", ".", function(state)
+        getgenv().autoslapplayers = state
+        while getgenv().autoslapplayers do
+            for i, v in pairs(game.Players:GetChildren()) do
+                if v ~= game.Players.LocalPlayer and v.Character then
+                    local args = {
+                        [1] = v:FindFirstChild("Right Arm"),
+                        [2] = Vector3.new(0.5891937017440796, 0.6427874565124512, -0.4895661175251007)
+                    }
+                    
+                    game:GetService("ReplicatedStorage").remotes.Slap:FireServer(unpack(args))
+                end
+            end
+        task.wait()
+        end
+    end)     
 
     else
         game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You're in the wrong game.",Icon = "rbxassetid://7733658504",Duration = 10})

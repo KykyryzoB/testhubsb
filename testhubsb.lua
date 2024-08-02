@@ -4646,6 +4646,43 @@ Section:NewButton("Tp to SafePort", ".", function()
     game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(595, 122, -330)
 end)
 
+local Tab = Window:NewTab("Player")
+    
+local Section = Tab:NewSection("Speed Hack")
+
+Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+end)
+
+Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+local Section = Tab:NewSection("Jump Hack")
+
+Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+end)
+
+Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+    game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+end)
+
+local Section = Tab:NewSection("Gravity Hack")
+
+Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+    workspace.Gravity = txt
+end)
+
+Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+    workspace.Gravity = s
+end)
+
+Library:ToggleUIGui({
+      Icons = "rbxassetid://16393121436",
+      Rainbow = true
+})
+
 elseif game.PlaceId == 18698003301 then
 
     game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Welcome!",Text = "Welcome to Hub Kykyryz0B.",Icon = "rbxassetid://7733960981",Duration = 10})
@@ -4696,7 +4733,7 @@ elseif game.PlaceId == 18698003301 then
             for i, v in pairs(game.Players:GetChildren()) do
                 if v ~= game.Players.LocalPlayer and v.Character then
                     local args = {
-                        [1] = v:FindFirstChild("Right Arm"),
+                        [1] = v.Character:FindFirstChild("Right Arm"),
                         [2] = Vector3.new(0.5891937017440796, 0.6427874565124512, -0.4895661175251007)
                     }
                     
@@ -4705,7 +4742,65 @@ elseif game.PlaceId == 18698003301 then
             end
         task.wait()
         end
-    end)     
+    end)  
+    
+    local Tab = Window:NewTab("Antis")
+
+    local Section = Tab:NewSection("Antis")
+    
+    Section:NewToggle("Anti Void", "Working on Map", function(state)
+        if state then
+            local void = Instance.new("Part", workspace)
+            void.Name = "bruhhhh"
+            void.Size = Vector3.new(2000, 1, 2000)
+            void.Transparency = 0.5 
+            void.CanCollide = true 
+            void.Anchored = true
+            void.CFrame = CFrame.new(-119, -0.249996185, 62.75, 1, 0, 0, 0, 1, 0, 0, 0, 1)
+            void.Parent = game.Workspace
+        else
+            if workspace:FindFirstChild("bruhhhh") then
+                workspace.bruhhhh:Destroy()
+            end
+        end
+    end)
+
+    local Tab = Window:NewTab("Player")
+    
+    local Section = Tab:NewSection("Speed Hack")
+    
+    Section:NewTextBox("Speed Hack", "TextboxInfo", function(txt)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = txt
+    end)
+    
+    Section:NewSlider("Speed Hack", "SliderInfo", 500, 20, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+    
+    local Section = Tab:NewSection("Jump Hack")
+    
+    Section:NewTextBox("Jump Hack", "TextboxInfo", function(txt)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = txt
+    end)
+    
+    Section:NewSlider("Jump Hack", "SliderInfo", 500, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+    
+    local Section = Tab:NewSection("Gravity Hack")
+    
+    Section:NewTextBox("Gravity Hack", "TextboxInfo", function(txt)
+        workspace.Gravity = txt
+    end)
+    
+    Section:NewSlider("Gravity Hack", "SliderInfo", 500, 0, function(s)
+        workspace.Gravity = s
+    end)
+    
+    Library:ToggleUIGui({
+          Icons = "rbxassetid://16393121436",
+          Rainbow = true
+    })
 
     else
         game:GetService("StarterGui"):SetCore("SendNotification",{Title = "Error",Text = "You're in the wrong game.",Icon = "rbxassetid://7733658504",Duration = 10})

@@ -4765,6 +4765,22 @@ elseif game.PlaceId == 18698003301 then
         end
     end)
 
+    Section:NewToggle("Anti Ragdoll", "Character Reset", function(state)
+        getgenv().antiragdolsb = state
+        if getgenv().antiragdolsb then
+            game.Players.LocalPlayer.Character.Humanoid.Health = 0
+            game.Players.LocalPlayer.CharacterAdded:Connect(function()
+                game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Changed:Connect(function()
+                    if game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Value == true and getgenv().antiragdolsb then
+                        repeat task.wait() game.Players.LocalPlayer.Character.Torso.Anchored = true
+                        until game.Players.LocalPlayer.Character:WaitForChild("Ragdolled").Value == false
+                        game.Players.LocalPlayer.Character.Torso.Anchored = false
+                    end
+                end)
+            end)
+        end
+    end)
+
     local Tab = Window:NewTab("Player")
     
     local Section = Tab:NewSection("Speed Hack")

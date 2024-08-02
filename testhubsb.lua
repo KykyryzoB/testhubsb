@@ -4750,7 +4750,7 @@ elseif game.PlaceId == 18698003301 then
     
     Section:NewToggle("Anti Void", "Working on Map", function(state)
         if state then
-            local void = Instance.new("Part", workspace)
+            local void = Instance.new("Part")
             void.Name = "bruhhhh"
             void.Size = Vector3.new(2000, 1, 2000)
             void.Transparency = 0.5 
